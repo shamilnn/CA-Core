@@ -2,7 +2,7 @@ This section outlines important definitions and interpretations and requirements
 The conformance verbs used are defined in [FHIR Conformance Rules].
 
 
-### General Guideance
+### General
 
 TBD
 
@@ -22,14 +22,12 @@ TBD
 **Client = Requestor, Server = Responder**
 
 #### Conformance Language:
-
-**SHALL**: an absolute requirement for all implementations
-
-**SHALL NOT**: an absolute prohibition against inclusion for all implementations
-
-**SHOULD/SHOULD NOT**: A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course
-
-**MAY**: This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications
+|Verb|Definition|
+|---|---|
+| **SHALL** | an absolute requirement for all implementations
+| **SHALL NOT** | an absolute prohibition against inclusion for all implementations
+| **SHOULD / SHOULD NOT** | A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course
+| **MAY** | This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications
 
 #### Examples
 
@@ -37,10 +35,18 @@ TBD
 
 ###### Query Scenario
 
-ToDo: Add Image
+![Query Scenario](C_Query.png)
+
+
+**Requirement:**
+
+The Server SHALL be able to return a BirthDate if it is known.  (i.e. It must be stored on the server or retrievable in some way.)
+
+(The BirthDate MAY be unknown and therefore not available to send.)
+
+**Process:**
 
 1. Client sends GET request to Server for a Patient (their demographics); included in the request is a query parameter (e.g. Patient’s HCN), so the Server knows which Patient’s info to return
-1. (???) Server MUST already have the capacity to store / support the Birth Date element for the Patient records maintained in the Server
 1. Server provides a response which includes the requested Patient’s information
   1. IF the Server has a Birth Date for the Patient, it MUST be included in the response
   1. IF the Patient’s Birth Date is not found on the Server, the Server SHOULD NOT send a null-value Birth Date and instead should remove the Birth Date element entirely from the response
@@ -49,9 +55,20 @@ ToDo: Add Image
 
 ###### Create / Update Scenario
 
-ToDo: Add Image
+![Create / Update Scenario](C_CreateUpdate.png)
 
-1. (???) Client MUST already have the capacity to send or relay the Birth Date element when creating or updating Patient Resource on a Server
+
+**Requirement:**
+
+The Client SHALL be able to send a BirthDate if it is known.  (i.e. It must be stored on the client or retrievable in some way.)
+
+The Server SHALL be able to store a BirthDate if it is provided.  (i.e. It must be stored on the server or somewhere where it can be retrieved later.)
+
+(The BirthDate MAY be unknown and therefore not available to send.)
+
+
+**Process:**
+
 1. Client performs SUBMIT function, and sends a Patient’s information to the Server
   1. IF the Client has a Birth Date for the Patient, it MUST be included in the sent information
   1. IF the Client doesn’t know a Birth Date for the Patient, the Client SHOULD NOT send a null-value Birth Date and instead should remove the Birth Date element entirely from the resource that is being pushed to the server
