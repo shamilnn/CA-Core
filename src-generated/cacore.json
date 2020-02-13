@@ -243,9 +243,9 @@
     },
     "StructureDefinition/profile-medicationrequest":{
     },
-    "StructureDefinition/profile-medicationdispense":{
-    },
     "StructureDefinition/profile-medicationadministration":{
+    },
+    "StructureDefinition/profile-medicationdispense":{
     },
     "StructureDefinition/profile-medicationstatement":{
     },

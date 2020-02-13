@@ -95,6 +95,20 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="profile-medicationadministration.html">
+                        •  MedicationAdministration Profile</a>
+</td>
+<td>Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="profile-medicationdispense.html">
+                        •  MedicationDispense Profile</a>
+</td>
+<td>Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="profile-medicationstatement.html">
                         •  MedicationStatement Profile</a>
 </td>

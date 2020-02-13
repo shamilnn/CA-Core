@@ -223,6 +223,24 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-medicationadministration"/>
+      </reference>
+      <name value="MedicationAdministration Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationdispense"/>
+      </reference>
+      <name value="MedicationDispense Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-medicationstatement"/>
       </reference>
       <name value="MedicationStatement Profile"/>
@@ -507,93 +525,103 @@
 <generation value="generated"/>
 </page>
 <page>
+<nameUrl value="profile-medicationadministration.html"/>
+<ns19:title xmlns:ns19="http://hl7.org/fhir" value="MedicationAdministration Profile"/>
+<generation value="generated"/>
+</page>
+<page>
+<nameUrl value="profile-medicationdispense.html"/>
+<ns20:title xmlns:ns20="http://hl7.org/fhir" value="MedicationDispense Profile"/>
+<generation value="generated"/>
+</page>
+<page>
 <nameUrl value="profile-medicationstatement.html"/>
-<ns19:title xmlns:ns19="http://hl7.org/fhir" value="MedicationStatement Profile"/>
+<ns21:title xmlns:ns21="http://hl7.org/fhir" value="MedicationStatement Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-observation.html"/>
-<ns20:title xmlns:ns20="http://hl7.org/fhir" value="Observation Profile"/>
+<ns22:title xmlns:ns22="http://hl7.org/fhir" value="Observation Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-organization.html"/>
-<ns21:title xmlns:ns21="http://hl7.org/fhir" value="Organization Profile"/>
+<ns23:title xmlns:ns23="http://hl7.org/fhir" value="Organization Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-organizationaffiliation.html"/>
-<ns22:title xmlns:ns22="http://hl7.org/fhir" value="OrganizationAffiliation Profile"/>
+<ns24:title xmlns:ns24="http://hl7.org/fhir" value="OrganizationAffiliation Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-patient.html"/>
-<ns23:title xmlns:ns23="http://hl7.org/fhir" value="Patient Profile"/>
+<ns25:title xmlns:ns25="http://hl7.org/fhir" value="Patient Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-pediatricbmi.html"/>
-<ns24:title xmlns:ns24="http://hl7.org/fhir" value="Pediatric BMI Profile"/>
+<ns26:title xmlns:ns26="http://hl7.org/fhir" value="Pediatric BMI Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-pediatricweight.html"/>
-<ns25:title xmlns:ns25="http://hl7.org/fhir" value="Pediatric Weight Profile"/>
+<ns27:title xmlns:ns27="http://hl7.org/fhir" value="Pediatric Weight Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-practitioner.html"/>
-<ns26:title xmlns:ns26="http://hl7.org/fhir" value="Practitioner Profile"/>
+<ns28:title xmlns:ns28="http://hl7.org/fhir" value="Practitioner Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-practitionerrole.html"/>
-<ns27:title xmlns:ns27="http://hl7.org/fhir" value="PractitionerRole Profile"/>
+<ns29:title xmlns:ns29="http://hl7.org/fhir" value="PractitionerRole Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-procedure.html"/>
-<ns28:title xmlns:ns28="http://hl7.org/fhir" value="Procedure Profile"/>
+<ns30:title xmlns:ns30="http://hl7.org/fhir" value="Procedure Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-results.html"/>
-<ns29:title xmlns:ns29="http://hl7.org/fhir" value="Results Profile"/>
+<ns31:title xmlns:ns31="http://hl7.org/fhir" value="Results Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="profile-smokingstatus.html"/>
-<ns30:title xmlns:ns30="http://hl7.org/fhir" value="SmokingStatus Profile"/>
+<ns32:title xmlns:ns32="http://hl7.org/fhir" value="SmokingStatus Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-birthsex.html"/>
-<ns31:title xmlns:ns31="http://hl7.org/fhir" value="Birth Sex"/>
+<ns33:title xmlns:ns33="http://hl7.org/fhir" value="Birth Sex"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-ethnicitycode.html"/>
-<ns32:title xmlns:ns32="http://hl7.org/fhir" value="Ethnicity Code"/>
+<ns34:title xmlns:ns34="http://hl7.org/fhir" value="Ethnicity Code"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-healthconcerncode.html"/>
-<ns33:title xmlns:ns33="http://hl7.org/fhir" value="Health Concern Codes"/>
+<ns35:title xmlns:ns35="http://hl7.org/fhir" value="Health Concern Codes"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptiondrugform.html"/>
-<ns34:title xmlns:ns34="http://hl7.org/fhir" value="Prescription Drug Form"/>
+<ns36:title xmlns:ns36="http://hl7.org/fhir" value="Prescription Drug Form"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptionmedicinalproduct.html"/>
-<ns35:title xmlns:ns35="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
+<ns37:title xmlns:ns37="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-vaccinecodes.html"/>
-<ns36:title xmlns:ns36="http://hl7.org/fhir" value="Vaccine Codes"/>
+<ns38:title xmlns:ns38="http://hl7.org/fhir" value="Vaccine Codes"/>
 <generation value="generated"/>
 </page>
 </page>
