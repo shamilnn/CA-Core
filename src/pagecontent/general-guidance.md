@@ -24,10 +24,10 @@ TBD
 #### Conformance Language:
 |Verb|Definition|
 |---|---|
-| **SHALL** | an absolute requirement for all implementations
-| **SHALL NOT** | an absolute prohibition against inclusion for all implementations
-| **SHOULD / SHOULD NOT** | A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course
-| **MAY** | This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications
+| **SHALL** | an absolute requirement for all implementations |
+| **SHALL NOT** | an absolute prohibition against inclusion for all implementations |
+| **SHOULD / SHOULD NOT** | A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course |
+| **MAY** | This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications |
 
 #### Examples
 
@@ -35,8 +35,9 @@ TBD
 
 ###### Query Scenario
 
-![Query Scenario](C_Query.png)
-
+<br>
+<img src="C_Query.png" alt="Create / Update Scenario" width="200"/>
+<br>
 
 **Requirement:**
 
@@ -54,9 +55,9 @@ The Server SHALL be able to return a BirthDate if it is known.  (i.e. It must be
 1. More prescriptive instructions on what exactly the Client needs to be able to DO with the Birth Date element it receives from the Server may be provided in additional, project-specific requirements, but these fall outside the scope of the Must Support flag
 
 ###### Create / Update Scenario
-
-![Create / Update Scenario](C_CreateUpdate.png)
-
+<br>
+<img src="C_CreateUpdate.png" alt="Create / Update Scenario" width="200"/>
+<br>
 
 **Requirement:**
 
