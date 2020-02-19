@@ -307,8 +307,17 @@
       <reference>
         <reference value="StructureDefinition/profile-practitioner"/>
       </reference>
-      <name value="Practitioner Profile"/>
-      <description value="Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <name value="Practitioner Profile (General)"/>
+      <description value="Proposed constraints and extensions on the Practitioner Resource for general use."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitioner-registry"/>
+      </reference>
+      <name value="Practitioner Profile (Provider Registry)"/>
+      <description value="Proposed constraints and extensions on the Practitioner Resource for use by Provider Registry systems."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>

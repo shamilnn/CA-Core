@@ -263,6 +263,8 @@
     },
     "StructureDefinition/profile-practitioner":{
     },
+    "StructureDefinition/profile-practitioner-registry":{
+    },
     "StructureDefinition/profile-practitionerrole":{
     },
     "StructureDefinition/profile-procedure":{

@@ -2,13 +2,13 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitioner",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "name": "PractitionerProfile",
-  "title": "Practitioner Profile",
+  "title": "Practitioner Profile (General)",
   "status": "draft",
-  "date": "2019-03-31",
-  "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "date": "2020-02-18",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Practitioner Resource for general use.",
   "kind": "resource",
   "abstract": false,
   "type": "Practitioner",
@@ -20,66 +20,79 @@
         "id": "Practitioner",
         "path": "Practitioner",
         "short": "Practitioner Profile",
-        "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource",
-        "mustSupport": true
-      },
-      {
+        "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource"
+      }, {
         "id": "Practitioner.identifier",
         "path": "Practitioner.identifier",
-        "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier.type",
-        "path": "Practitioner.identifier.type",
-        "min": 1,
-        "example": [
-          {
-            "label": "Pattern",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "PRN"
-                }
-              ]
-            }
-          }
-        ],
-        "mustSupport": true
-      },
-      {
+      }, {
         "id": "Practitioner.identifier.system",
         "path": "Practitioner.identifier.system",
-        "short": "Naming systems used to uniquely identify health care providers within a Jurisditional Provider Registry.",
-        "min": 1,
-        "example": [
+        "min": "1"
+      }, {
+        "id": "Practitioner.identifier.value",
+        "path": "Practitioner.identifier.value",
+        "min": "1"
+      }, {
+        "id": "Practitioner.name",
+        "path": "Practitioner.name",
+        "constraint": [
           {
-            "label": "(Ontario)",
-            "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-provider-upi"
+            "key": "ca-core-name",
+            "severity": "error",
+            "human": "Practitioner.name.given or Practitioner.name.family or both SHALL be present",
+            "expression": "family.exists() or given.exists()",
+            "xpath": "f:given or f:family"
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier.value",
-        "path": "Practitioner.identifier.value",
-        "min": 1,
-        "mustSupport": true,
-        "isModifier": false
-      },
-      {
-        "id": "Practitioner.name",
-        "path": "Practitioner.name",
-        "max": "1",
+      }, {
+        "id": "Practitioner.telecom",
+        "path": "Practitioner.telecom",
         "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.family",
-        "path": "Practitioner.name.family",
-        "min": 1,
-        "mustSupport": true,
-        "isModifier": false
+      }, {
+        "id": "Practitioner.address.extension",
+        "path": "Practitioner.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      }, {
+        "id": "Practitioner.address.extension:Extension",
+        "path": "Practitioner.address.extension",
+        "sliceName": "preferred",
+        "short": "HL7 Preferred Address Flag extension",
+        "definition": "Flag denoting whether parent address item is preferred",
+        "min": "0",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
+            ]
+          }
+        ]
+      }, {
+        "id": "Practitioner.birthDate",
+        "path": "Practitioner.birthDate",
+        "mustSupport": true
+      }, {
+        "id": "Practitioner.qualification.code.coding.system",
+        "path": "Practitioner.qualification.code.coding.system",
+        "short": "QualifiedRoleType",
+        "definition": "A code system for the degree or educational rank that the credential specifies. May also apply to an Expertise type.",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the QualifiedRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "binding": {
+          "strength": "preferred",
+          "description": "A code system for the degree or educational rank that the credential specifies",
+          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
+        }
       }
     ]
   }

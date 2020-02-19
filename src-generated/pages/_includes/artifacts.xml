@@ -159,9 +159,16 @@
 <tr>
 <td style="column-width:30%">
 <a href="profile-practitioner.html">
-                        •  Practitioner Profile</a>
+                        •  Practitioner Profile (General)</a>
 </td>
-<td>Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+<td>Proposed constraints and extensions on the Practitioner Resource for general use.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="profile-practitioner-registry.html">
+                        •  Practitioner Profile (Provider Registry)</a>
+</td>
+<td>Proposed constraints and extensions on the Practitioner Resource for use by Provider Registry systems.</td>
 </tr>
 <tr>
 <td style="column-width:30%">
