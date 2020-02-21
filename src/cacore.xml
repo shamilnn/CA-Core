@@ -71,6 +71,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/ext-deceased"/>
+      </reference>
+      <name value="Deceased"/>
+      <description value="Flag or date indicating that an individual is deceased."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/ext-ethnicity"/>
       </reference>
       <name value="Ethnicity"/>

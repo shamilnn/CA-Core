@@ -223,6 +223,13 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="extension-ext-deceased.html">
+                        •  Deceased</a>
+</td>
+<td>Flag or date indicating that an individual is deceased.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="extension-ext-ethnicity.html">
                         •  Ethnicity</a>
 </td>
