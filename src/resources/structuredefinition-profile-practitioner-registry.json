@@ -68,6 +68,7 @@
       }, {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
+        "min": "1",
         "constraint": [
           {
             "key": "ca-core-name",
