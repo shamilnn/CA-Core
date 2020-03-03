@@ -95,6 +95,20 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="profile-medicationadministration.html">
+                        •  MedicationAdministration Profile</a>
+</td>
+<td>Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="profile-medicationdispense.html">
+                        •  MedicationDispense Profile</a>
+</td>
+<td>Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="profile-medicationstatement.html">
                         •  MedicationStatement Profile</a>
 </td>
@@ -145,9 +159,16 @@
 <tr>
 <td style="column-width:30%">
 <a href="profile-practitioner.html">
-                        •  Practitioner Profile</a>
+                        •  Practitioner Profile (General)</a>
 </td>
-<td>Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+<td>Proposed constraints and extensions on the Practitioner Resource for general use.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="profile-practitioner-registry.html">
+                        •  Practitioner Profile (Provider Registry)</a>
+</td>
+<td>Proposed constraints and extensions on the Practitioner Resource for use by Provider Registry systems.</td>
 </tr>
 <tr>
 <td style="column-width:30%">
@@ -199,6 +220,13 @@
                         •  Data Absent Reason</a>
 </td>
 <td>Provides a reason why the expected value or elements in the element that is extended are missing.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="extension-ext-deceased.html">
+                        •  Deceased</a>
+</td>
+<td>Flag or date indicating that an individual is deceased.</td>
 </tr>
 <tr>
 <td style="column-width:30%">
