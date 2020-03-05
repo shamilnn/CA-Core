@@ -22,7 +22,8 @@ TBD
 **Client = Requestor, Server = Responder**
 
 #### Conformance Language:
-|Verb|Definition|
+
+| Verb | Definition |
 |---|---|
 | **SHALL** | an absolute requirement for all implementations |
 | **SHALL NOT** | an absolute prohibition against inclusion for all implementations |
