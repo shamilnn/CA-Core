@@ -22,11 +22,12 @@ TBD
 **Client = Requestor, Server = Responder**
 
 #### Conformance Language:
-|Verb|Definition|
+
+| Verb | Definition |
 |---|---|
 | **SHALL** | an absolute requirement for all implementations |
 | **SHALL NOT** | an absolute prohibition against inclusion for all implementations |
-| **SHOULD and SHOULD NOT** | A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course |
+| **SHOULD / SHOULD NOT** | A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course |
 | **MAY** | This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications |
 
 #### Examples
