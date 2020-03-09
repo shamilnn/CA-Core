@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "v3-rolestatus",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table>\n        <tr>\n          <td>\n            <b>Level</b>\n          </td>\n          <td>\n            <b>Concept Code</b>\n          </td>\n          <td>\n            <b>Print Name</b>\n          </td>\n          <td>\n            <b>Definition</b>\n          </td>\n        </tr>\n        <tr>\n          <td>0-S</td>\n          <td>normal</td>\n          <td>normal</td>\n          <td>The 'typical' state. Excludes \"nullified\" which represents the termination state of a Role instance that was created in error.</td>\n        </tr>\n        <tr>\n          <td>1-L</td>\n          <td>. active</td>\n          <td>active</td>\n          <td>The state representing the fact that the Entity is currently active in the Role.</td>\n        </tr>\n        <tr>\n          <td>1-L</td>\n          <td>. cancelled</td>\n          <td>cancelled</td>\n          <td>The terminal state resulting from cancellation of the role prior to activation.</td>\n        </tr>\n        <tr>\n          <td>1-L</td>\n          <td>. pending</td>\n          <td>pending</td>\n          <td>The state representing that fact that the role has not yet become active.</td>\n        </tr>\n        <tr>\n          <td>1-L</td>\n          <td>. suspended</td>\n          <td>suspended</td>\n          <td>The state that represents a suspension of the Entity playing the Role. This state is arrived at from the \"active\" state.</td>\n        </tr>\n        <tr>\n          <td>1-L</td>\n          <td>. terminated</td>\n          <td>terminated</td>\n          <td>The state representing the successful termination of the Role. </td>\n        </tr>\n        <tr>\n          <td>0-L</td>\n          <td>nullified</td>\n          <td>nullified</td>\n          <td>The state representing the termination of a Role instance that was created in error.</td>\n        </tr>\n      </table>\n    </div>"
+  },
+  "url": "http://terminology.hl7.org/ValueSet/v3-rolestatus",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.5.1068"
+    }
+  ],
+  "name": "v3.RoleStatus",
+  "title": "v3 Value Set RoleStatus",
+  "status": "active",
+  "experimental": false,
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes representing the defined possible states of an Role, as defined by the Role class state machine.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-rolestatus",
+        "concept": [
+          {
+            "code": "normal",
+            "display": "normal"
+          },
+          {
+            "code": "active",
+            "display": "active"
+          },
+          {
+            "code": "cancelled",
+            "display": "cancelled"
+          },
+          {
+            "code": "pending",
+            "display": "pending"
+          },
+          {
+            "code": "suspended",
+            "display": "suspended"
+          },
+          {
+            "code": "terminated",
+            "display": "terminated"
+          },
+          {
+            "code": "nullified",
+            "display": "nullified"
+          }
+        ]
+      }
+    ]
+  }
+}
