@@ -8,7 +8,7 @@
   "status": "draft",
   "date": "2020-03-09",
   "publisher": "Canada Health Infoway",
-  "description": "This extension applies to the PractitionerRole resource and indicates the possible states of an Role, as defined by the HL7v3 Role class state machine.",
+  "description": "This extension applies to the PractitionerRole resource and indicates the possible states of the Role, as defined by the HL7v3 Role class state machine.",
   "jurisdiction": [
     {
       "coding": [
@@ -37,7 +37,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Role status extension",
-        "definition": "Represents the defined possible states of an Role, as defined by the Role class state machine.",
+        "definition": "Represents the defined possible states of the Role, as defined by the HL7v3 Role class state machine.",
         "min": "0",
         "max": "1",
         "isModifier": true,
@@ -46,7 +46,7 @@
           {
             "identity": "rim",
             "map": "RoleStatus",
-            "comment": "Codes representing the defined possible states of an Role"
+            "comment": "Codes representing the defined possible states of the Role"
           }
         ]
       },
