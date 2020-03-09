@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole-registry",
   "version": "0.0.1",
   "name": "PractitionerRoleProfile",
-  "title": "Practitioner Role Profile (Provider Registry systems use)",
+  "title": "PractitionerRole Profile (Provider Registry)",
   "status": "draft",
   "date": "2020-03-09",
   "publisher": "Canada Health Infoway",

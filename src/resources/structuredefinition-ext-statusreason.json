@@ -8,7 +8,7 @@
   "status": "draft",
   "date": "2020-03-09",
   "publisher": "Canada Health Infoway",
-  "description": "This extension applies to the PractitionerRole resource and further defines the possible states of the Role.",
+  "description": "Provides a textual description (reason) for a status.",
   "jurisdiction": [
     {
       "coding": [
@@ -36,28 +36,37 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Role status reason extension",
-        "definition": "Represents the textual description for the possible states of the Role, as defined by the HL7v3 Role class state machine.",
-        "min": "0",
+        "short": "StatusReason extension",
+        "definition": "Provides a textual description (reason) for a status.",
+        "min": 0,
         "max": "1"
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "min": "1",
+        "min": 1,
         "max": "1",
         "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-statusreason"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
         "short": "Free text description",
-        "definition": "Textual description further clarifying the defined possible states of a practitioner",
-        "min": "1",
+        "definition": "Textual description of status.",
+        "min": 1,
         "max": "1",
         "type": [
           {
-            "code": "String"
+            "code": "string"
           }
         ]
       }
