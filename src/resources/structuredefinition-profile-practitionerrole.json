@@ -2,13 +2,24 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitionerrole",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "name": "PractitionerRoleProfile",
-  "title": "PractitionerRole Profile",
+  "title": "Practitioner Role Profile (General Use)",
   "status": "draft",
-  "date": "2019-03-29",
-  "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "date": "2020-03-09",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the PractitionerRole Resource for general use.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "PractitionerRole",
@@ -23,10 +34,24 @@
         "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
       },
       {
+        "id": "PractitionerRole.identifier",
+        "path": "PractitionerRole.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.identifier.system",
+        "path": "PractitionerRole.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.identifier.value",
+        "path": "PractitionerRole.identifier.value",
+        "min": 1
+      },
+      {
         "id": "PractitionerRole.practitioner",
         "path": "PractitionerRole.practitioner",
         "short": "Practitioner that is able to provide the defined services for the organization.",
-        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -38,70 +63,38 @@
         "mustSupport": true
       },
       {
-        "id": "PractitionerRole.organization",
-        "path": "PractitionerRole.organization",
-        "short": "Organization where the practioner provides services",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "PractitionerRole.code",
         "path": "PractitionerRole.code",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true,
         "binding": {
-          "strength": "extensible"
+          "strength": "preferred",
+          "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.",
+          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scptype"
         }
       },
       {
         "id": "PractitionerRole.specialty",
         "path": "PractitionerRole.specialty",
-        "min": 1,
-        "max": "1",
         "mustSupport": true,
         "binding": {
-          "strength": "extensible"
+          "strength": "preferred",
+          "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
+          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"
         }
-      },
-      {
-        "id": "PractitionerRole.location",
-        "path": "PractitionerRole.location",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
-            ]
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "PractitionerRole.telecom",
         "path": "PractitionerRole.telecom",
-        "short": "Contact point",
         "mustSupport": true
       },
       {
         "id": "PractitionerRole.telecom.system",
         "path": "PractitionerRole.telecom.system",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "PractitionerRole.telecom.value",
         "path": "PractitionerRole.telecom.value",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       }
     ]
   }
