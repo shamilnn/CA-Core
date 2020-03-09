@@ -180,14 +180,14 @@
 <tr>
 <td style="column-width:30%">
 <a href="profile-practitionerrole.html">
-                        •  PractitionerRole Profile</a>
+                        •  PractitionerRole Profile (General)</a>
 </td>
 <td>Proposed constraints and extensions on the PractitionerRole Resource for general use.</td>
 </tr>
 <tr>
 <td style="column-width:30%">
 <a href="profile-practitionerrole-registry.html">
-                        •  PractitionerRole Profile</a>
+                        •  PractitionerRole Profile (Provider Registry)</a>
 </td>
 <td>Proposed constraints and extensions on the PractitionerRole Resource for use by Provider Registry systems.</td>
 </tr>
