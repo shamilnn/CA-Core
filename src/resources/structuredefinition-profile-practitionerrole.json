@@ -65,6 +65,8 @@
       {
         "id": "PractitionerRole.code",
         "path": "PractitionerRole.code",
+        "short": "HealthcareProviderRoleType",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the HealthcareProviderRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
         "binding": {
           "strength": "preferred",
           "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.",
@@ -74,6 +76,8 @@
       {
         "id": "PractitionerRole.specialty",
         "path": "PractitionerRole.specialty",
+        "short": "PractitionerSpecialty",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
