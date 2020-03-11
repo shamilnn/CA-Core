@@ -6,7 +6,7 @@
   "name": "ObservationProfile",
   "title": "Observation Profile (General Use)",
   "status": "draft",
-  "date": "2020-03-09",
+  "date": "2020-03-11",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the Observation Resource",
   "jurisdiction": [
@@ -42,10 +42,12 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "mustSupport": true,
         "binding": {
-          "strength": "preferred"
+          "strength": "preferred",
+          "description": "LOINC codes identifying names of simple observations.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
         }
       },
       {
