@@ -137,13 +137,6 @@
 </tr>
 <tr>
 <td style="column-width:30%">
-<a href="profile-organizationaffiliation.html">
-                        •  OrganizationAffiliation Profile</a>
-</td>
-<td>Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
 <a href="profile-patient.html">
                         •  Patient Profile</a>
 </td>

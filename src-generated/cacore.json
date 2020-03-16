@@ -306,8 +306,6 @@
     },
     "StructureDefinition/profile-organization":{
     },
-    "StructureDefinition/profile-organizationaffiliation":{
-    },
     "StructureDefinition/profile-patient":{
     },
     "StructureDefinition/profile-pediatricbmi":{

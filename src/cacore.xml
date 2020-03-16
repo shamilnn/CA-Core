@@ -303,7 +303,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-    <resource>
+    <!--    <resource>
       <reference>
         <reference value="StructureDefinition/profile-organizationaffiliation"/>
       </reference>
@@ -311,7 +311,7 @@
       <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
-    </resource>
+    </resource> -->
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-patient"/>
