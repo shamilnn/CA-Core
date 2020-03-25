@@ -6,7 +6,7 @@ This is a [FHIR](http://hl7.org/fhir) implementation guide that provides basic i
 
 #### Status
 
-A **living document** including **scratch** notes and profiles captured while reviewing the [USCoreR4 Implementation Guide](http://build.fhir.org/ig/HL7/US-Core-R4/) against various Canadian sources.
+A **living document** including **draft** profiles initially based on the [USCoreR4 Implementation Guide](http://build.fhir.org/ig/HL7/US-Core-R4/) that are being refined for Canadian use by volunteers participating in the [Canadian FHIR Implementations Working Group - Canadian FHIR Baseline Profiles Workstream](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations_).
 
 #### Principles
 
@@ -21,7 +21,3 @@ The following principles were applied when creating the profiles:
 
 
 The [CI build for this repository can be found here](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/).
-
-#### Want to contribute?
-
-[Visit the wiki getting started page!](https://github.com/scratch-fhir-profiles/CA-Core/wiki/Getting-Started)
