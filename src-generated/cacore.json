@@ -304,6 +304,8 @@
     },
     "StructureDefinition/profile-observation":{
     },
+    "StructureDefinition/profile-observation-results":{
+    },
     "StructureDefinition/profile-organization":{
     },
     "StructureDefinition/profile-patient":{
@@ -321,8 +323,6 @@
     "StructureDefinition/profile-practitionerrole-registry":{
     },
     "StructureDefinition/profile-procedure":{
-    },
-    "StructureDefinition/profile-results":{
     },
     "StructureDefinition/profile-smokingstatus":{
     },
