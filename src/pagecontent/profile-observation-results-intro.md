@@ -1,5 +1,7 @@
-# CA Core Observation (General Use) Profile
-This Observation profile sets minimum expectations for the Observation resource to represent various types of observation within or outside of the clinical context, if no other more specific profile applies.
+# CA Core Observation Profile
+This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies.
+
+This observation may represent the result of a simple laboratory test such as hematocrite or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. 
 
 This profile defines core localisation concepts for use in an Canadian context.
 
@@ -10,6 +12,9 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 
 **Required elements:**
 * status of the result value
+* category to classify the general type of observation being made
+* code to classify what was observed
+* reference to a subject
 
 ### Data Absent Reason
 In situations where the minimum cardinality of an element or attribute is 1 and information is missing and the Responder knows the precise reason for the absence of data, Responders SHALL send the reason for the missing information using values (such as [NullFlavor](https://www.hl7.org/fhir/extension-iso21090-nullflavor.html)) from the value set where they exist or using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
@@ -31,4 +36,4 @@ Following elements are marked as Must Support in the Canadian Patient profile to
 
 ## Usage Note
 Observation is intended for capturing measurements and subjective point-in-time assessments.
-This profile is to capture observations that do not belong to laboratory results or exams, such as findings and disorders, family history observations, etc., for example: psychosocial (spiritual practices), social & financial (income type), risk to staff (ergonomics), housing (affordable), activities of daily living.
+This profile constrains the Observation resource to represent various results in a patient summary, if no other more specific profile applies.

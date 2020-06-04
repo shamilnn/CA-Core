@@ -2,13 +2,13 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-observation",
-  "version": "0.1.0",
-  "name": "ObservationProfile",
+  "version": "0.2.0",
+  "name": "ObservationProfile (General Use)",
   "title": "Observation Profile (General Use)",
   "status": "draft",
-  "date": "2020-03-11",
+  "date": "2020-06-01",
   "publisher": "Canada Health Infoway",
-  "description": "Proposed constraints on the Observation Resource",
+  "description": "Proposed constraints on the Observation Resource for general use",
   "jurisdiction": [
     {
       "coding": [
@@ -32,14 +32,12 @@
         "path": "Observation",
         "short": "Observation Profile",
         "definition": "The Observation Profile is based upon the core FHIR Observation Resource"
-      },
-      {
+      }, {
         "id": "Observation.category",
         "path": "Observation.category",
-        "min": 1,
+        "min": 0,
         "mustSupport": true
-      },
-      {
+      }, {
         "id": "Observation.code",
         "path": "Observation.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
@@ -49,8 +47,7 @@
           "description": "LOINC codes identifying names of simple observations.",
           "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
         }
-      },
-      {
+      }, {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
@@ -63,21 +60,18 @@
           }
         ],
         "mustSupport": true
-      },
-      {
+      }, {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "type": [
           {
             "code": "dateTime"
-          },
-          {
+          }, {
             "code": "Period"
           }
         ],
         "mustSupport": true
-      },
-      {
+      }, {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "constraint": [
@@ -90,8 +84,7 @@
           }
         ],
         "mustSupport": true
-      },
-      {
+      }, {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "constraint": [
