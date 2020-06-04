@@ -289,7 +289,16 @@
       <reference>
         <reference value="StructureDefinition/profile-observation"/>
       </reference>
-      <name value="Observation Profile"/>
+      <name value="Observation Profile (General)"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-observation-results"/>
+      </reference>
+      <name value="Observation Profile (Laboratory Results)"/>
       <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
@@ -381,15 +390,6 @@
       </reference>
       <name value="Procedure Profile"/>
       <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-results"/>
-      </reference>
-      <name value="Results Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
