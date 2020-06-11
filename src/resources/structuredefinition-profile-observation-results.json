@@ -6,7 +6,7 @@
   "name": "ObservationProfile (Laboratory Results)",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
-  "date": "2020-06-01",
+  "date": "2020-06-08",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
@@ -32,11 +32,13 @@
         "path": "Observation",
         "short": "Observation Profile",
         "definition": "The Observation Profile is based upon the core FHIR Observation Resource"
-      }, {
+      },
+      {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
         "slicing": {
@@ -50,7 +52,8 @@
         },
         "min": 1,
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.category:laboratory",
         "path": "Observation.category",
         "sliceName": "laboratory",
@@ -58,7 +61,7 @@
         "min": 1,
         "constraint": [
           {
-            "key": "ca-core-results-1",
+            "key": "ca-core-category",
             "severity": "error",
             "human": "SHALL have a category from 'http://terminology.hl7.org/CodeSystem/observation-category'",
             "expression": "where(coding.system='http://terminology.hl7.org/CodeSystem/observation-category' and coding.code.exists()).exists()",
@@ -66,20 +69,23 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.category:laboratory.system",
         "path": "Observation.category.coding.system",
         "short": "FHIR standard classification of type of observation code system",
         "min": 1,
         "max": "1",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
-      }, {
+      },
+      {
         "id": "Observation.category:laboratory.code",
         "path": "Observation.category.coding.code",
         "short": "FHIR standard classification of type of observation code",
         "min": 1,
         "max": "1"
-      }, {
+      },
+      {
         "id": "Observation.code",
         "path": "Observation.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC or PCLOCD code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
@@ -89,7 +95,8 @@
           "description": "LOINC codes identifying names of simple observations.",
           "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
         }
-      }, {
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
@@ -102,13 +109,15 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "type": [
           {
             "code": "dateTime"
-          }, {
+          },
+          {
             "code": "Period"
           }
         ],
@@ -121,7 +130,8 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "slicing": {
@@ -135,15 +145,16 @@
         },
         "constraint": [
           {
-            "key": "ca-core-results-1",
+            "key": "ca-core-value",
             "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason SHALL be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason"
+            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
+            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
+            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
@@ -154,14 +165,15 @@
         ],
         "constraint": [
           {
-            "key": "ca-core-results-2",
+            "key": "ca-core-results-1",
             "severity": "warning",
             "human": "SHOULD use SNOMED CT for coded Results",
             "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
             "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
           }
         ]
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueCodeableConcept.system",
         "path": "Observation.value[x].system",
         "short": "FHIR standard classification of type of observation code system",
@@ -172,13 +184,15 @@
           "description": "A coded value **SHOULD**  be selected from [SNOMED CT](http://www.snomed.org).",
           "valueSet": "http://snomed.info/sct"
         }
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueCodeableConcept.code",
         "path": "Observation.value[x].code",
         "short": "A code difining laboratory result",
         "min": 1,
         "max": "1"
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
         "sliceName": "valueQuantity",
@@ -187,47 +201,173 @@
             "code": "Quantity"
           }
         ]
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueQuantity.value",
         "path": "Observation.value[x].value",
         "min": 1
-      }, {
+      },
+      {
         "id": "Observation.value[x]:valueQuantity.system",
         "path": "Observation.value[x].system",
         "fixedUri": "http://unitsofmeasure.org",
         "constraint": [
           {
-            "key": "ca-core-results-3",
+            "key": "ca-core-results-2",
             "severity": "error",
             "human": "SHALL use UCUM for coded quantity units",
             "expression": "where(valueQuantity.system='http://unitsofmeasure.org' and valueQuantity.value.exists()).exists()",
             "xpath": "exists(f:valueQuantity/value) and exists(f:valueQuantity/system[@value='http://unitsofmeasure.org'])"
           }
         ]
-      }, {
+      },
+      {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "constraint": [
           {
-            "key": "ca-core-results-1",
+            "key": "ca-core-value",
+            "severity": "error",
+            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
+            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
+            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "LOINC codes identifying names of simple observations.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+        }
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "constraint": [
+          {
+            "key": "ca-core-component-value",
+            "severity": "error",
+            "human": "Observation.component.value[x] or Observation.component.dataAbsentReason SHALL be present",
+            "expression": "component.value[x].exists() or component.dataAbsentReason.exists()",
+            "xpath": "Observation.component.value[x] or Observation.component.dataAbsentReason"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ca-core-results-3",
+            "severity": "warning",
+            "human": "SHOULD use SNOMED CT for coded Results",
+            "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
+            "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.value[x]:valueCodeableConcept.system",
+        "path": "Observation.component.value[x].system",
+        "short": "FHIR standard classification of type of observation code system",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "description": "A coded value **SHOULD**  be selected from [SNOMED CT](http://www.snomed.org).",
+          "valueSet": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "Observation.component.value[x]:valueCodeableConcept.code",
+        "path": "Observation.component.value[x].code",
+        "short": "A code difining laboratory result",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component.value[x]:valueQuantity",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueQuantity",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.value[x]:valueQuantity.value",
+        "path": "Observation.component.value[x].value",
+        "min": 1
+      },
+      {
+        "id": "Observation.component.value[x]:valueQuantity.system",
+        "path": "Observation.component.value[x].system",
+        "fixedUri": "http://unitsofmeasure.org",
+        "constraint": [
+          {
+            "key": "ca-core-results-4",
+            "severity": "error",
+            "human": "SHALL use UCUM for coded quantity units",
+            "expression": "where(valueQuantity.system='http://unitsofmeasure.org' and valueQuantity.value.exists()).exists()",
+            "xpath": "exists(f:valueQuantity/value) and exists(f:valueQuantity/system[@value='http://unitsofmeasure.org'])"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "constraint": [
+          {
+            "key": "ca-core-component-value",
             "severity": "error",
             "human": "Observation.value[x] or Observation.dataAbsentReason SHALL be present",
             "expression": "value[x].exists() or dataAbsentReason.exists()",
             "xpath": "Observation.value[x] or Observation.dataAbsentReason"
           }
         ],
-        "mustSupport": true
-      }, {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "mustSupport": true
-      }, {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "mustSupport": true
-      }, {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
         "mustSupport": true
       }
     ]
