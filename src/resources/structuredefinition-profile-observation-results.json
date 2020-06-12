@@ -6,7 +6,7 @@
   "name": "ObservationProfile (Laboratory Results)",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
-  "date": "2020-06-08",
+  "date": "2020-06-12",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
@@ -123,7 +123,7 @@
         ],
         "constraint": [
           {
-            "key": "ca-core-results-2",
+            "key": "ca-core-datetime",
             "severity": "error",
             "human": "Datetime SHALL be at least to day",
             "expression": "($this as dateTime).toString().length() >= 8"
@@ -300,7 +300,7 @@
         ],
         "constraint": [
           {
-            "key": "ca-core-results-3",
+            "key": "ca-core-results-1",
             "severity": "warning",
             "human": "SHOULD use SNOMED CT for coded Results",
             "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
@@ -348,7 +348,7 @@
         "fixedUri": "http://unitsofmeasure.org",
         "constraint": [
           {
-            "key": "ca-core-results-4",
+            "key": "ca-core-results-2",
             "severity": "error",
             "human": "SHALL use UCUM for coded quantity units",
             "expression": "where(valueQuantity.system='http://unitsofmeasure.org' and valueQuantity.value.exists()).exists()",

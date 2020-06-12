@@ -9,9 +9,8 @@ Local codes are allowed as well. In case of using local codes to better classify
 
 ## Code
 The Observation.code element describes what was observed. Sometimes this is called the observation "name".
-The FHIR standard recommendeds to utilize a LOINC code for that. 
 
-For use in a Canadian context the [pan-Canadian LOINC Observation Code Database (pCLOCD)](https://infocentral.infoway-inforoute.ca/en/standards/canadian/pclocd-loinc) is recommended instead.
+The [pan-Canadian LOINC Observation Code Database (pCLOCD)](https://infocentral.infoway-inforoute.ca/en/standards/canadian/pclocd-loinc) is recommended for use in a Canadian context. Code System URI is https://fhir.infoway-inforoute.ca/CodeSystem/pCLOCD
 
 ## value[x]
 If the result value is a code:

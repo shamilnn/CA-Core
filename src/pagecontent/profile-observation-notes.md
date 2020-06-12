@@ -12,7 +12,8 @@ Local codes are allowed as well. In case of using local codes and to better clas
 
 ## Code
 The Observation.code element describes what was observed. Sometimes this is called the observation "name".
-FHIR standard recommended pattern is to utilize a LOINC code. For use in a Canadian context the [pan-Canadian LOINC Observation Code Database (pCLOCD)](https://infocentral.infoway-inforoute.ca/en/standards/canadian/pclocd-loinc) is recommended instead.
+
+The [pan-Canadian LOINC Observation Code Database (pCLOCD)](https://infocentral.infoway-inforoute.ca/en/standards/canadian/pclocd-loinc) is recommended for use in a Canadian context. Code System URI is https://fhir.infoway-inforoute.ca/CodeSystem/pCLOCD
 
 ## value[x] and dataAbsentReason
 At its core, Observation uses a name-value pair to code data. However, when the value for the actual observation is not know, i.e., _Observation.value[x]_ is missed, the _Observation.dataAbsentReason_ SHALL be present and provide a reason why the expected value is missing.
