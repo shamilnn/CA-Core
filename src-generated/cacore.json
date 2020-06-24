@@ -304,7 +304,13 @@
     },
     "StructureDefinition/profile-observation":{
     },
+    "StructureDefinition/profile-observation-bmipercentile":{
+    },
+    "StructureDefinition/profile-observation-bmiratio":{
+    },
     "StructureDefinition/profile-observation-results":{
+    },
+    "StructureDefinition/profile-observation-weight":{
     },
     "StructureDefinition/profile-organization":{
     },
