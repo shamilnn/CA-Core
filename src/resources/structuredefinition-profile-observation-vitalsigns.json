@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-observation-vitalsigns",
+  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-observation",
+  "version": "0.1.0",
+  "name": "Observation (Vital Signs)",
+  "title": "Observation Profile (Vital Signs)",
+  "status": "draft",
+  "date": "2020-06-29",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints on the Observation resource for use in storing and querying Vital Signs",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/vitalsigns",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "short": "Observation Vital Signs Profile",
+        "definition": "The Observation Vital Signs profile is based upon the core FHIR Observation Vital Signs profile",
+        "mustSupport": true
+      }
+    ]
+  }
+}
