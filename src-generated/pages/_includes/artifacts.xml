@@ -130,31 +130,10 @@
 </tr>
 <tr>
 <td style="column-width:30%">
-<a href="profile-observation-bmipercentile.html">
-                        •  Observation Profile (Percentile BMI)</a>
-</td>
-<td>Proposed constraints on the Observation resource for use in storing and querying Body mass index (BMI) [Percentile].</td>
-</tr>
-<tr>
-<td style="column-width:30%">
-<a href="profile-observation-bmiratio.html">
-                        •  Observation Profile (Ratio BMI)</a>
-</td>
-<td>Proposed constraints on the Observation resource for use in storing and querying Body mass index (BMI) [Ratio].</td>
-</tr>
-<tr>
-<td style="column-width:30%">
 <a href="profile-observation-results.html">
                         •  Observation Profile (Laboratory Results)</a>
 </td>
 <td>Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
-<a href="profile-observation-weight.html">
-                        •  Observation Profile (Weight)</a>
-</td>
-<td>Proposed constraints on the Observation resource for use in storing and querying body weight.</td>
 </tr>
 <tr>
 <td style="column-width:30%">

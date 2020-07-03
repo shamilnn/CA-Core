@@ -296,37 +296,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/profile-observation-bmipercentile"/>
-      </reference>
-      <name value="Observation Profile (Percentile BMI)"/>
-      <description value="Proposed constraints on the Observation resource for use in storing and querying Body mass index (BMI) [Percentile]."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-observation-bmiratio"/>
-      </reference>
-      <name value="Observation Profile (Ratio BMI)"/>
-      <description value="Proposed constraints on the Observation resource for use in storing and querying Body mass index (BMI) [Ratio]."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/profile-observation-results"/>
       </reference>
       <name value="Observation Profile (Laboratory Results)"/>
       <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-observation-weight"/>
-      </reference>
-      <name value="Observation Profile (Weight)"/>
-      <description value="Proposed constraints on the Observation resource for use in storing and querying body weight."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
