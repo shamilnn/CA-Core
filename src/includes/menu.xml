@@ -14,7 +14,35 @@
       </li>
     </ul>
   </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="general-guidance.html">General Guidance</a>
+      </li>
+      <li>
+        <a href="security.html">Security</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="{{site.data.info.assets}}allartifacts.html">Overview</a>
+      </li>
+      <li>
+        <a href="{{site.data.info.assets}}artifacts.html">Canadian Artifacts</a>
+      </li>
+      <li>
+        <a href="{{site.data.info.assets}}vitalsigns-profiles.html">Vital Signs Profiles</a>
+      </li>
+    </ul>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -31,4 +59,4 @@
       </li>
     </ul>
   </li>
-</ul>      
+</ul>
