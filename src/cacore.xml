@@ -508,10 +508,20 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="artifacts.html"/>
-        <title value="Artifact List"/>
-        <generation value="html"/>
-      </page>
+				<nameUrl value="allartifacts.html"/>
+				<title value="FHIR Artifacts"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artifact List"/>
+					<generation value="html"/>
+				</page>
+        <page>
+					<nameUrl value="vitalsigns-profiles.html"/>
+					<title value="Vital Signs"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
     </page>
   </definition>
 </ImplementationGuide>

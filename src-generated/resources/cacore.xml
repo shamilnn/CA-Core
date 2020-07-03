@@ -507,10 +507,14 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="artifacts.html"/>
-        <title value="Artifact List"/>
-        <generation value="html"/>
-      <page>
+				<nameUrl value="allartifacts.html"/>
+				<title value="FHIR Artifacts"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artifact List"/>
+					<generation value="html"/>
+				<page>
 <nameUrl value="extension-ext-patientbirthsex.html"/>
 <ns0:title xmlns:ns0="http://hl7.org/fhir" value="Birth Sex"/>
 <generation value="generated"/>
@@ -746,6 +750,12 @@
 <generation value="generated"/>
 </page>
 </page>
+        <page>
+					<nameUrl value="vitalsigns-profiles.html"/>
+					<title value="Vital Signs"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
     </page>
   </definition>
 </ImplementationGuide>
