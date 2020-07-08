@@ -151,20 +151,6 @@
 </tr>
 <tr>
 <td style="column-width:30%">
-<a href="profile-pediatricbmi.html">
-                        •  Pediatric BMI Profile</a>
-</td>
-<td>Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
-<a href="profile-pediatricweight.html">
-                        •  Pediatric Weight Profile</a>
-</td>
-<td>Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
 <a href="profile-practitioner.html">
                         •  Practitioner Profile (General)</a>
 </td>

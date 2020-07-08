@@ -310,10 +310,6 @@
     },
     "StructureDefinition/profile-patient":{
     },
-    "StructureDefinition/profile-pediatricbmi":{
-    },
-    "StructureDefinition/profile-pediatricweight":{
-    },
     "StructureDefinition/profile-practitioner":{
     },
     "StructureDefinition/profile-practitioner-registry":{
