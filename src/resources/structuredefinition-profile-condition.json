@@ -55,7 +55,7 @@
       {
         "id": "Condition.code",
         "path": "Condition.code",
-        "definition": "Identification of the the Client&s relevant condition, problem or diagnosis or recording of "problem absent" or of "problems unknown", as interpreted by the provider.",
+        "definition": "Identification of the the Client&s relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
         "min": 1,
         "mustSupport": true
       },
@@ -71,7 +71,7 @@
           ],
           "rules": "open"
         },
-        "definition": "Identification of the the Client&s relevant condition, problem or diagnosis or recording of "problem absent" or of "problems unknown", as interpreted by the provider.",
+        "definition": "Identification of the the Client&s relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
         "min": 1,
         "mustSupport": true
       },
@@ -100,7 +100,7 @@
         "path": "Condition.code.coding",
         "sliceName": "@default",
         "short": "Other identifications of the condition, problem or diagnosis",
-        "definition": "Other identifications of the the Client&s relevant condition, problem or diagnosis or recording of "problem absent" or of "problems unknown", as interpreted by the provider.",
+        "definition": "Other identifications of the the Client&s relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
         "max": "1",
         "type":  [
           {
