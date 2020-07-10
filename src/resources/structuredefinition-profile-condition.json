@@ -6,7 +6,7 @@
   "name": "ConditionProfile",
   "title": "Condition Profile",
   "status": "draft",
-  "date": "2020-06-07",
+  "date": "2020-06-09",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the Condition Resource",
   "jurisdiction":  [
@@ -37,12 +37,15 @@
       {
         "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
-        "mustSupport": true
+        "min": 0,        
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active."
       },
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
-        "min": 1,
+        "min": 0,
         "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
