@@ -1,7 +1,30 @@
-<!--- Text entered into this file will appear at the top of the profiles page before the Formal Views of the profile content. -->
+# CA Core Condition Profile
+This profile constrains the Condition resource to record a list of problems associated with a patient. It identifies which core elements, vocabularies and value sets to be present in the resource when using this profile.
 
-This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fhir/condition.profile.json) on 2019-03-28 and constrained during a review of US Core against Canadian sources.
+This profile defines core localisation concepts for use in a Canadian context.
 
-Key differences from [USCoreR4 Condition](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-condition.html):
-- Condition.category bound to HL7 default [Condition Category Codes](http://hl7.org/fhir/r4/valueset-condition-category.html)
-- Condition.codes bound to [Canadian Health Concern Code](https://tgateway.infoway-inforoute.ca/singlesubset.html?id=2.16.840.1.113883.2.20.3.278&versionid=20181031) instead of [US Core Problem Value Set](http://hl7.org/fhir/us/core/ValueSet/us-core-problem)
+## Mandatory Data Elements
+All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
+
+Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
+
+**Required elements:**
+* code identifying the patient's relevant condition
+* reference to a subject
+
+## Must Support Data Elements
+Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/general-guidance.html#must-support) definition).
+
+Following elements are marked as Must Support in the Canadian Condition profile to aid record matching in databases with many pediatric records.
+
+**Must Support elements:**
+* clinical status of the condition
+* verification status to support the clinical status of the condition
+* category assigned to the condition
+* code identifying the patient's relevant condition
+* reference to subject
+* onset - estimated or actual date of the condition
+
+## Usage Note
+Condition is intended for capturing and querying patient's current and historical problems.
+
