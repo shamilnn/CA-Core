@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-encounter",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-encounter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "EncounterProfile",
   "title": "Encounter Profile",
   "status": "draft",
-  "date": "2020-07-21",
+  "date": "2020-07-23",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the Encounter Resource",
   "jurisdiction":  [
@@ -47,7 +47,18 @@
       {
         "id": "Encounter.type",
         "path": "Encounter.type",
-        "mustSupport": true
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the SNOMED CT code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],        
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Valueset to describe the Encounter Type",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/encountertype"
+        }
       },
       {
         "id": "Encounter.subject",
