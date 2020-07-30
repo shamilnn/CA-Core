@@ -288,6 +288,13 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="valueset-encountertype.html">
+                        •  Encounter Type</a>
+</td>
+<td>The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="valueset-ethnicitycode.html">
                         •  Ethnicity Code</a>
 </td>

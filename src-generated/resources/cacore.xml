@@ -394,6 +394,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/encountertype"/>
+      </reference>
+      <name value="Encounter Type"/>
+      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/ethnicitycode"/>
       </reference>
       <name value="Ethnicity Code"/>
@@ -655,28 +664,33 @@
 <generation value="generated"/>
 </page>
 <page>
+<nameUrl value="valueset-encountertype.html"/>
+<ns37:title xmlns:ns37="http://hl7.org/fhir" value="Encounter Type"/>
+<generation value="generated"/>
+</page>
+<page>
 <nameUrl value="valueset-ethnicitycode.html"/>
-<ns37:title xmlns:ns37="http://hl7.org/fhir" value="Ethnicity Code"/>
+<ns38:title xmlns:ns38="http://hl7.org/fhir" value="Ethnicity Code"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-healthconcerncode.html"/>
-<ns38:title xmlns:ns38="http://hl7.org/fhir" value="Health Concern Codes"/>
+<ns39:title xmlns:ns39="http://hl7.org/fhir" value="Health Concern Codes"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptiondrugform.html"/>
-<ns39:title xmlns:ns39="http://hl7.org/fhir" value="Prescription Drug Form"/>
+<ns40:title xmlns:ns40="http://hl7.org/fhir" value="Prescription Drug Form"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptionmedicinalproduct.html"/>
-<ns40:title xmlns:ns40="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
+<ns41:title xmlns:ns41="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-vaccinecodes.html"/>
-<ns41:title xmlns:ns41="http://hl7.org/fhir" value="Vaccine Codes"/>
+<ns42:title xmlns:ns42="http://hl7.org/fhir" value="Vaccine Codes"/>
 <generation value="generated"/>
 </page>
 </page>
