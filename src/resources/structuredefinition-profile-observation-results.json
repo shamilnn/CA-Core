@@ -241,11 +241,6 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "mustSupport": true
