@@ -39,7 +39,6 @@ The following elements are marked as Must Support in the Observation (Laboratory
 *	value
 *	dataAbsentReason
 *	interpretation
-*	specimen
 *	reference range
 *	hasMember
 *	component.code
