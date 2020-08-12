@@ -8,7 +8,7 @@
   "status": "draft",
   "date": "2019-03-31",
   "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "description": "Proposed constraints and extensions on the Medication resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
@@ -36,7 +36,7 @@
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
-        "comment": "Usage Notes: either text or at least one coding or both have to be present",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
         "mustSupport": true
       },
       {
@@ -54,13 +54,26 @@
       {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
-        "comment": "Usage Notes: either text or at least one coding or both have to be present",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
         "mustSupport": true
+      },
+      {
+        "id": "Medication.manufacturer",
+        "path": "Medication.manufacturer",
+        "comment": "CA Core Usage Notes: This is a reference to an organization that manufactures the medication. TBD: if there is a need to refernce a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organisation (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
       },
       {
         "id": "Medication.form",
         "path": "Medication.form",
-        "comment": "Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
+        "comment": "CA Core Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, which would be created and maintained by Canada Health Infoway.",

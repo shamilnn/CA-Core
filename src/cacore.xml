@@ -116,10 +116,28 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/ext-rolestatus"/>
+      </reference>
+      <name value="Role Status"/>
+      <description value="Represents the status of the Role, as defined by the HL7v3 Role class state machine."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/ext-servicelanguage"/>
       </reference>
       <name value="Service Language"/>
       <description value="Indentifies languages that that services are provided in."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-statusreason"/>
+      </reference>
+      <name value="Status Reason"/>
+      <description value="Provides a textual description (reason) for a status."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -206,6 +224,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-immunizationrecommendation"/>
+      </reference>
+      <name value="ImmunizationRecommendation Profile"/>
+      <description value="Proposed constraints and extensions on the ImmunizationRecommendation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-location"/>
       </reference>
       <name value="Location Profile"/>
@@ -219,15 +246,6 @@
       </reference>
       <name value="Medication Profile"/>
       <description value="Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-medicationrequest"/>
-      </reference>
-      <name value="MedicationRequest Profile"/>
-      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -251,6 +269,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-medicationrequest"/>
+      </reference>
+      <name value="MedicationRequest Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-medicationstatement"/>
       </reference>
       <name value="MedicationStatement Profile"/>
@@ -262,7 +289,16 @@
       <reference>
         <reference value="StructureDefinition/profile-observation"/>
       </reference>
-      <name value="Observation Profile"/>
+      <name value="Observation Profile (General)"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-observation-results"/>
+      </reference>
+      <name value="Observation Profile (Laboratory Results)"/>
       <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
@@ -276,7 +312,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-    <resource>
+    <!--    <resource>
       <reference>
         <reference value="StructureDefinition/profile-organizationaffiliation"/>
       </reference>
@@ -284,31 +320,13 @@
       <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
-    </resource>
+    </resource> -->
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-patient"/>
       </reference>
       <name value="Patient Profile"/>
       <description value="Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-pediatricbmi"/>
-      </reference>
-      <name value="Pediatric BMI Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-pediatricweight"/>
-      </reference>
-      <name value="Pediatric Weight Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -334,8 +352,17 @@
       <reference>
         <reference value="StructureDefinition/profile-practitionerrole"/>
       </reference>
-      <name value="PractitionerRole Profile"/>
-      <description value="Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <name value="PractitionerRole Profile (General)"/>
+      <description value="Proposed constraints and extensions on the PractitionerRole Resource for general use."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitionerrole-registry"/>
+      </reference>
+      <name value="PractitionerRole Profile (Provider Registry)"/>
+      <description value="Proposed constraints and extensions on the PractitionerRole Resource for use by Provider Registry systems."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -345,15 +372,6 @@
       </reference>
       <name value="Procedure Profile"/>
       <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-results"/>
-      </reference>
-      <name value="Results Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -372,6 +390,15 @@
       </reference>
       <name value="Birth Sex"/>
       <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/encountertype"/>
+      </reference>
+      <name value="Encounter Type"/>
+      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))"/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
@@ -445,10 +472,20 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="artifacts.html"/>
-        <title value="Artifact List"/>
-        <generation value="html"/>
-      </page>
+				<nameUrl value="allartifacts.html"/>
+				<title value="FHIR Artifacts"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artifact List"/>
+					<generation value="html"/>
+				</page>
+        <page>
+					<nameUrl value="vitalsigns-profiles.html"/>
+					<title value="Vital Signs"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
     </page>
   </definition>
 </ImplementationGuide>
