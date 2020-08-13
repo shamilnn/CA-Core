@@ -16,7 +16,11 @@ This element is bound to [EncounterType]() value set which includes codes from [
 To extract all descendant of the [SNOMED CT](http://www.snomed.org) concept 308335008 use an ECL expression ```<< 308335008```.
 
 ```diff
-- ISSUE: Need to better define value set for Encounter.type and explain the difference between Encoutner.type and Encounter.serviceType based on use cases. 
+- ISSUE #143: Need to better define the value set for the Encounter.type and explain the difference between Encounter.type and Encounter.serviceType based on use cases. 
+- Possible value sets:
+- descendant of the SNOMED CT concept 308335008 | Patient encounter procedure (procedure);
+- descendant of the SNOMED CT concept 308467007 | Seen in establishment (finding)
+- descendant of the SNOMED CT concept 308930007 | Seen by health professional (finding)
 ```
 
 ## Service Type
