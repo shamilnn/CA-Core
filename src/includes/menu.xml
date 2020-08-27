@@ -12,18 +12,8 @@
       <li>
         <a href="security.html">Security</a>
       </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
       <li>
-        <a href="developmentprocess2.html">Development Process</a>
-      </li>
-      <li>
-        <a href="security.html">Security</a>
+        <a href="developmentprocess.html">Development Process</a>
       </li>
     </ul>
   </li>

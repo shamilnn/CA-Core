@@ -1,7 +1,7 @@
-# CA Core Procedure Profile
-This profile sets minimum expectations for the Procedure resource to record, search and fetch current or historical procedures performed on or for a patient. It identifies which core elements and value sets SHALL be present in the resource when using this profile.
+# CA Baseline Procedure Profile
+This profile sets minimum expectations for the Procedure resource to record, search and fetch current or historical procedures performed on or for a patient. It identifies which elements and value sets SHALL be present in the resource when using this profile.
 
-This profile defines core localisation concepts for use in an Canadian context.
+This profile defines localization concepts for use in an Canadian context.
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.

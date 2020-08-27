@@ -6,7 +6,7 @@
   <title value="Canadian Core"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="Good question..."/>
+  <publisher value="Canadian FHIR Implementor Working Group"/>
   <contact>
     <telecom>
       <system value="other"/>
@@ -462,7 +462,7 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="developmentprocess2.html"/>
+        <nameUrl value="developmentprocess.html"/>
         <title value="Development Process"/>
         <generation value="markdown"/>
       </page>

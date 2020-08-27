@@ -1,7 +1,7 @@
-# CA Core Condition Profile
-This profile constrains the Condition resource to record a list of problems associated with a patient. It identifies which core elements, vocabularies and value sets to be present in the resource when using this profile.
+# CA Baseline Condition Profile
+This profile constrains the Condition resource to record a list of problems associated with a patient. It identifies which elements, vocabularies and value sets to be present in the resource when using this profile.
 
-This profile defines core localisation concepts for use in a Canadian context.
+This profile defines localization concepts for use in a Canadian context.
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
@@ -27,4 +27,3 @@ Following elements are marked as Must Support in the Canadian Condition profile 
 
 ## Usage Note
 Condition is intended for capturing and querying patient's current and historical problems.
-

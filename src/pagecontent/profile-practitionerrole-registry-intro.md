@@ -1,7 +1,7 @@
-# CA Core PractitionerRole Profile
+# CA Baseline PractitionerRole Profile
 This PractitionerRole profile sets minimum expectations for the PractitionerRole resource to record, search and fetch the recording of the location and types of services that Practitioner is able to provide for an organization.
 
-This profile defines core localisation concepts for use in an Canadian context.
+This profile defines localization concepts for use in an Canadian context.
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
@@ -11,7 +11,7 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 **Required elements:**
 * an identifier
 * reference to a practitioner
-* speciality 
+* specialty
 
 In addition to that, some optional elements (e.g., PractitionerRole.telecom) have required components that MUST be present if that optional element is provided.
 
@@ -30,7 +30,7 @@ Following elements are marked as Must Support in the Canadian Patient profile to
 * speciality
 
 ## Extensions
-This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine. 
+This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
 
 This extension is labeled as modifier because the status code may provide additional knowledge about the PractitionerRole resource that modifies its meaning or interpretation.
 
@@ -39,5 +39,5 @@ In conjunction to the RoleStatus extension, this PractitionerRole profile includ
 Note: Role status effective from/to dates go to _PractitionerRole.period_ element.
 
 ## Usage Note
-This PractitionerRole profile is intended to provide a foundation for a central or distributed Provider or Healthcare Directory. 
+This PractitionerRole profile is intended to provide a foundation for a central or distributed Provider or Healthcare Directory.
 Additional work flow components and elements may be required for a particular implementation.

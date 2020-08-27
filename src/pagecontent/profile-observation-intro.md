@@ -1,7 +1,7 @@
-# CA Core Observation (General Use) Profile
+# CA Baseline Observation (General Use) Profile
 This profile sets minimum expectations for the Observation resource to represent various observations if no other, more specific profile is applicable. An observation is a measurement or assertion about a subject (person, group, device, location, or another subject).
 
-This profile defines core localization concepts for use in the Canadian context.
+This profile defines localization concepts for use in the Canadian context.
 
 ## Mandatory Data Elements
 All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
