@@ -1,6 +1,6 @@
-<!--- Text entered into this file will appear at the bottome of the profiles page after the Formal Views of the profile content. -->
+<!--- Text entered into this file will appear at the bottom of the profiles page after the Formal Views of the profile content. -->
 ## Identifiers
-Mutiple individual healthcare identifiers may be provded in Patient.identifier element.
+Multiple individual healthcare identifiers may be provided in Patient.identifier element.
 
 However, to support particular types of federal patient and person health numbers used by all jurisdictions across Canada following optional types are defined to uniquely identifying patients:
 * Canadian Passport Number

@@ -1,7 +1,7 @@
 ## Identifiers
 Multiple types of provider identifiers may be used in Practitioner.identifier element in the Canadian context:
 * Provincial health plan provider/ Billing number
-* Licence Number
+* License Number
 * Medical Doctor Number
 
 Implementers may use other identifiers to capture in a more specific way such as internal provider number, jurisdictions providing credentials.

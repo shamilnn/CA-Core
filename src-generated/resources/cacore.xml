@@ -24,31 +24,31 @@
   <definition>
     <!--    <grouping id="conformance">
       <name value="Capability Statements"/>
-      <description value="Capabilities of systems claiming to be conformant to the CA-Core implementation guide"/>
+      <description value="Capabilities of systems claiming to be conformant to the CA-Baseline implementation guide"/>
     </grouping>-->
     <grouping id="profiles">
       <name value="Profiles"/>
-      <description value="Constraints on FHIR resources to be adhered to as part of the CA-Core implementation guide"/>
+      <description value="Constraints on FHIR resources to be adhered to as part of the CA-Baseline implementation guide"/>
     </grouping>
     <grouping id="extensions">
       <name value="Extensions"/>
-      <description value="Extensions defined as part of the CA-Core implementation guide"/>
+      <description value="Extensions defined as part of the CA-Baseline implementation guide"/>
     </grouping>
     <grouping id="terminology">
       <name value="Terminology"/>
-      <description value="ValueSets (and Code Systems) defined for use within the CA-Core implementation guide"/>
+      <description value="ValueSets (and Code Systems) defined for use within the CA-Baseline implementation guide"/>
     </grouping>
     <!--    <grouping id="operations">
       <name value="Operation Definitions"/>
-      <description value="Additional operations defined for use within the CA-Core implementation guide"/>
+      <description value="Additional operations defined for use within the CA-Baseline implementation guide"/>
     </grouping>
     <grouping id="search">
       <name value="Search Parameters"/>
-      <description value="Additional search parameters defined for use within the CA-Core implementation guide"/>
+      <description value="Additional search parameters defined for use within the CA-Baseline implementation guide"/>
     </grouping>
     <grouping id="examples">
       <name value="Example(s)"/>
-      <description value="Example(s) showing the use of the CA-Core profiles"/>
+      <description value="Example(s) showing the use of the CA-Baseline profiles"/>
     </grouping>-->
     <resource>
       <reference>
@@ -145,7 +145,7 @@
         <reference value="StructureDefinition/profile-allergyintolerance"/>
       </reference>
       <name value="AllergyIntolerance Profile"/>
-      <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -154,7 +154,7 @@
         <reference value="StructureDefinition/profile-condition"/>
       </reference>
       <name value="Condition Profile"/>
-      <description value="Proposed constraints and extensions on the Condition Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Condition Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -163,7 +163,7 @@
         <reference value="StructureDefinition/profile-device"/>
       </reference>
       <name value="Device Profile"/>
-      <description value="Proposed constraints and extensions on the Device Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Device Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -172,7 +172,7 @@
         <reference value="StructureDefinition/profile-diagnosticreport"/>
       </reference>
       <name value="DiagnosticReport Profile"/>
-      <description value="Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -181,7 +181,7 @@
         <reference value="StructureDefinition/profile-diagnosticreportnote"/>
       </reference>
       <name value="DiagnosticReport for Report and Note Profile"/>
-      <description value="Proposed constraints and extensions on the DiagnosticReport Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the DiagnosticReport Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -190,7 +190,7 @@
         <reference value="StructureDefinition/profile-documentreference"/>
       </reference>
       <name value="Document Reference Profile"/>
-      <description value="Proposed constraints and extensions on the DocumentReference Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the DocumentReference Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -199,7 +199,7 @@
         <reference value="StructureDefinition/profile-encounter"/>
       </reference>
       <name value="Encounter Profile"/>
-      <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -208,7 +208,7 @@
         <reference value="StructureDefinition/profile-goal"/>
       </reference>
       <name value="Goal Profile"/>
-      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -217,7 +217,7 @@
         <reference value="StructureDefinition/profile-immunization"/>
       </reference>
       <name value="Immunization Profile"/>
-      <description value="Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -226,7 +226,7 @@
         <reference value="StructureDefinition/profile-immunizationrecommendation"/>
       </reference>
       <name value="ImmunizationRecommendation Profile"/>
-      <description value="Proposed constraints and extensions on the ImmunizationRecommendation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the ImmunizationRecommendation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -235,7 +235,7 @@
         <reference value="StructureDefinition/profile-location"/>
       </reference>
       <name value="Location Profile"/>
-      <description value="Proposed constraints and extensions on the Location Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Location Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -244,7 +244,7 @@
         <reference value="StructureDefinition/profile-medication"/>
       </reference>
       <name value="Medication Profile"/>
-      <description value="Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -253,7 +253,7 @@
         <reference value="StructureDefinition/profile-medicationadministration"/>
       </reference>
       <name value="MedicationAdministration Profile"/>
-      <description value="Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -262,7 +262,7 @@
         <reference value="StructureDefinition/profile-medicationdispense"/>
       </reference>
       <name value="MedicationDispense Profile"/>
-      <description value="Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -271,7 +271,7 @@
         <reference value="StructureDefinition/profile-medicationrequest"/>
       </reference>
       <name value="MedicationRequest Profile"/>
-      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -280,7 +280,7 @@
         <reference value="StructureDefinition/profile-medicationstatement"/>
       </reference>
       <name value="MedicationStatement Profile"/>
-      <description value="Proposed constraints and extensions on the MedicationStatement Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the MedicationStatement Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -289,7 +289,7 @@
         <reference value="StructureDefinition/profile-observation"/>
       </reference>
       <name value="Observation Profile (General)"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -298,7 +298,7 @@
         <reference value="StructureDefinition/profile-observation-results"/>
       </reference>
       <name value="Observation Profile (Laboratory Results)"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -307,7 +307,7 @@
         <reference value="StructureDefinition/profile-organization"/>
       </reference>
       <name value="Organization Profile"/>
-      <description value="Proposed constraints and extensions on the Organization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Organization Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -316,7 +316,7 @@
         <reference value="StructureDefinition/profile-organizationaffiliation"/>
       </reference>
       <name value="OrganizationAffiliation Profile"/>
-      <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource> -->
@@ -325,7 +325,7 @@
         <reference value="StructureDefinition/profile-patient"/>
       </reference>
       <name value="Patient Profile"/>
-      <description value="Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -370,7 +370,7 @@
         <reference value="StructureDefinition/profile-procedure"/>
       </reference>
       <name value="Procedure Profile"/>
-      <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -379,7 +379,7 @@
         <reference value="StructureDefinition/profile-smokingstatus"/>
       </reference>
       <name value="SmokingStatus Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -458,6 +458,11 @@
       <page>
         <nameUrl value="general-guidance.html"/>
         <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="developmentprocess.html"/>
+        <title value="Development Process"/>
         <generation value="markdown"/>
       </page>
       <page>

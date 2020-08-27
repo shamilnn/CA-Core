@@ -1,9 +1,9 @@
-# CA Core Observation (Laboratory Results) Profile
+# CA Baseline Observation (Laboratory Results) Profile
 This Observation (Laboratory Results) profile further constrains the Observation (General Use) profile to represent results of laboratory tests.
 
 This profile may represent a single value from a specific laboratory test (e.g. hematocrit) or it may represent a grouped set of results from a multi- test study or panel (e.g. complete blood count, urinalysis, electrolytes).
 
-The Observation (Laboratory Results) profile reflects core localization concepts in the Canadian context. 
+The Observation (Laboratory Results) profile reflects localization concepts in the Canadian context. 
 
 ## Mandatory Data Elements
 All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
@@ -45,7 +45,7 @@ The following elements are marked as Must Support in the Observation (Laboratory
 *	component.value[x]
 
 ## Usage Note
-Observation (Laboratory Results) is intended to represent results of laboratory tests and studies. This profile constrains the Observation (General Use) resource to represent laboratory results in messages and patient summaries if no other, more specific profile is more appropriate. 
+Observation (Laboratory Results) is intended to represent results of laboratory tests and studies. This profile constrains the Observation (General Use) resource to represent laboratory results in messages and patient summaries if no other, more specific profile is more appropriate.
 
 The following list of examples is intended to represent some examples of typical use cases and is not exhaustive:
 *	complete blood count
@@ -61,6 +61,3 @@ The following list of examples is intended to represent some examples of typical
 including the interpretations and reference ranges associated with the result(s).
 
 Observation (Laboratory Results) should not be used if one of the following profiles is applicable: (to be completed later)
-
-
-

@@ -1,4 +1,4 @@
-# CA Core Practitioner Profile for Registries
+# CA Baseline Practitioner Profile for Registries
 This Practitioner profile sets minimum expectations for the Practitioner resource to record, search and fetch demographics and other administrative information about a person who is directly or indirectly involved in the provisioning of healthcare.
 
 This profile further constrains the general purpose Practitioner profile and is intended to be used by Provider or Healthcare Directory systems. 
@@ -10,7 +10,7 @@ This profile further constrains the general purpose Practitioner profile and is 
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
 
 
-Most elements in FHIR specification have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems. 
+Most elements in FHIR specification have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems.
 
 **Required elements:**
 * an identifier
@@ -34,10 +34,9 @@ Following elements are marked as Must Support in the Canadian Patient profile to
 * a birth date
 
 ## Modifier Extension
-This Practitioner profile contains optional [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate if a practitioner is deceased or not. 
+This Practitioner profile contains optional [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate if a practitioner is deceased or not.
 
 This extension is labeled as a modifier because once a practitioner is marked as deceased, the clinical processes that the practitioner was involved in may be significantly different.
 
 ## Usage Note
 This Practitioner profile is intended to provide a foundation for a central or distributed Provider or Healthcare Directory. Additional work flow components and elements may be required for a particular implementation.
-

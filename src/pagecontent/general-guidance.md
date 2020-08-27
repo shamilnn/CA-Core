@@ -17,7 +17,7 @@ TBD
 
 <sup>1</sup> Business rules, data regulations, additional implementation guides should determine what the server will do with the data it receives (i.e. store, persist, etc.)
 
-<sup>2</sup> Scope of the CA Core Profiles does not include prescriptive constraints on what a Querying Client has to do with the data it receives (i.e. ignore, display, store, persist, etc.).*
+<sup>2</sup> Scope of the CA Baseline Profiles does not include prescriptive constraints on what a Querying Client has to do with the data it receives (i.e. ignore, display, store, persist, etc.).*
 
 **Client = Requestor, Server = Responder**
 
@@ -78,7 +78,7 @@ The Server SHALL be able to store a BirthDate if it is provided.  (i.e. It must 
 1. More prescriptive instructions on what exactly the Server needs to be able to DO with the Birth Date element it receives from the Client may be provided in additional, project-specific requirement, but these fall outside the scope of the Must Support flag
 
 
-| !! Note: Content frome here is from US Core ... placeholder only** !! |
+| !! Note: Content from here is from US Core ... placeholder only** !! |
 |---------|
 
 
