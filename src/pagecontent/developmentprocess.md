@@ -80,3 +80,23 @@ The following domains and "live" implementation guides were identified for the d
 - Patient Summaries (International Patient Summary)
 - eReferral (Ontario's eReferral Specification)
 - COVID-19 (LOGICA COVID-19 FHIR Specification)
+
+### Implementation Guide Maturity
+In the interest of exposing the internally reviewed profiles out to the community for more rapid feedback, we've identified the FHIR maturity level of the profiles and have noted the profiles that have gone through the initial due diligence review on the [artifacts page](artifacts.html).
+
+#### FHIR Maturity Level
+All artifacts in this specification are assigned a “Maturity Level”, known as FMM (after the well known CMM grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is. The following FMM levels are defined:
+
+FMM 0 = The resource or profile (artifact) has been published on the current build. This level is synonymous with Draft.
+
+FMM 1 = DRAFT 0 PLUS the artifact produces no warnings during the build process and the responsible WG has indicated that they consider the artifact substantially complete and ready for implementation.
+
+FMM 2 = FMM 1 PLUS the artifact has been tested and successfully supports interoperability among at least three independently developed systems leveraging most of the scope (e.g. at least 80% of the core data elements) using semi-realistic data and scenarios based on at least one of the declared scopes of the artifact (e.g. at a connectathon). These interoperability results must have been reported to and accepted by the responsible working group.
+
+FMM 3 = FMM 2 PLUS the artifact has been verified by the work group as meeting the Conformance Resource Quality Guidelines; has been subject to a round of formal balloting; has at least 10 distinct implementer comments recorded in the tracker drawn from at least 3 organizations resulting in at least one substantive change.
+
+FMM 4 = FMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artifact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
+
+FMM 5 = FMM 5 PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
+
+Normative the artifact is now considered stable.
