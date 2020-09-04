@@ -11,9 +11,9 @@ The content of this release has not yet been balloted through HL7 Canada but eac
 
 All artifacts in this specification are assigned a “Maturity Level”, known as FMM (after the well known CMM grades). The FMM level can be used by implementers to judge how advanced - and therefore stable - an artifact is.
 
-| Profile <br> | FHIR Maturity Level <br> | Substream Review Status <br> | Due Diligence Review Status <br> |
+| Profile <br> | FHIR Maturity <br> Level <br> | Substream <br>Review Status <br> | Due Diligence<br> Review Status <br> |
 |---|---|---|---|
-| AllergyIntolerance Profile | 0 | In Progress | Not Complete |
+| AllergyIntolerance Profile | 0 | In Progress                 | Not Complete |
 | Condition Profile | 0 | Complete | Not Complete |
 | Device Profile | 0 | Not Complete | Not Complete |
 | DiagnosticReport Profile | 0 | In Progress | Not Complete |
