@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-allergyintolerance",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-allergyintolerance",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "AllergyIntoleranceProfile",
   "title": "AllergyIntolerance Profile",
   "status": "draft",
-  "date": "2020-08-17",
+  "date": "2020-09-08",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the AllergyIntolerance Resource",
   "jurisdiction": [
@@ -166,11 +166,11 @@
         "min": 0,
         "mustSupport": true
       }, {
-        "id": "AllergyIntolerance.code.coding:AbsentOrUnknownAllergy",
+        "id": "AllergyIntolerance.code.coding:NotAsked",
         "path": "AllergyIntolerance.code.coding",
-        "sliceName": "AbsentOrUnknownAllergy",
-        "short": "Code for absent or unknown allergy or intolerance",
-        "definition": "Code for an allergy or intolerance statement (either a positive or a negated/excluded statement). This describes a categorical negated statement.",
+        "sliceName": "NotAsked",
+        "short": "Code for NOT asked or NOT possible to obtain information about allergy or intolerance",
+        "definition": "Code for the case when a patient has NOT been asked or it is NOT possible to obtain information about any history of allergy or intolerance.",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the NullFlavor value set for interoperability purposes but are not required to do so to be considered conformant.",
         "min": 0,
         "max": "1",
@@ -179,20 +179,66 @@
             "code": "Coding"
           }
         ],
+        "constraint": [
+          {
+            "key": "ca-core-allergy-notasked",
+            "severity": "error",
+            "human": "if AllergyIntolerance.code is a NullFlavor value, then AllergyIntolerance.clinicalStatus, AllergyIntolerance.verificationStatus, AllergyIntolerance.type, AllergyIntolerance.category, AllergyIntolerance.criticality SHALL NOT be present",
+            "expression": "AllergyIntolerance.code.coding.where(system = 'https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor').exists() implies (AllergyIntolerance.verificationStatus.exists().not() and AllergyIntolerance.type.exists().not() and AllergyIntolerance.category.exists().not() and AllergyIntolerance.criticality.exists().not())",
+            "xpath": "f:code/f:coding/f:system/@value='https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor' and exists(f:verificationStatus).not() and exists(f:type).not() and exists(f:category).not() and exists(f:criticality).not()"
+          }
+        ],
         "binding": {
           "strength": "preferred",
           "description": "Negation/exclusion codes for reporting no known allergies or not available data.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor"
         }
       }, {
-        "id": "AllergyIntolerance.code.coding:AbsentOrUnknownAllergy.system",
+        "id": "AllergyIntolerance.code.coding:NotAsked.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
         "fixedUri": "http://hl7.org/fhir/v3/NullFlavor"
       }, {
-        "id": "AllergyIntolerance.code.coding:AbsentOrUnknownAllergy.code",
+        "id": "AllergyIntolerance.code.coding:NotAsked.code",
         "path": "AllergyIntolerance.code.coding.code",
         "min": 1
+      }, {
+        "id": "AllergyIntolerance.code.coding:NoAllergy",
+        "path": "AllergyIntolerance.code.coding",
+        "sliceName": "NoAllergy",
+        "short": "Code when a patient has been asked and has indicated no history of allergies or intolerance",
+        "definition": "Code for the case when a patient has been asked and has indicated no history of allergies or intolerance.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ca-core-allergy-noallergy",
+            "severity": "error",
+            "human": "if AllergyIntolerance.code is '716186003' No known allergy, then AllergyIntolerance.verificationStatus SHALL be one of the following: confirmed | refuted | entered-in-error",
+            "expression": "AllergyIntolerance.code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() and AllergyIntolerance.verificationStatus.coding.where(code = 'unconfirmed').empty()",
+            "xpath": "f:code/f:coding/f:system/@value='http://snomed.info/sct' and exists(f:verificationStatus/f:coding/f:code/@value='unconfirmed').not()"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Negation/exclusion codes for reporting no known allergies",
+          "valueSet": "http://snomed.info/sct"
+        }
+      }, {
+        "id": "AllergyIntolerance.code.coding:NoAllergy.system",
+        "path": "AllergyIntolerance.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://snomed.info/sct"
+      }, {
+        "id": "AllergyIntolerance.code.coding:NoAllergy.code",
+        "path": "AllergyIntolerance.code.coding.code",
+        "min": 1,
+        "fixedString": "716186003"
       }, {
         "id": "AllergyIntolerance.code.coding:@default",
         "path": "AllergyIntolerance.code.coding",
