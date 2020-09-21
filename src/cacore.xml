@@ -173,10 +173,11 @@
         <reference value="StructureDefinition/profile-diagnosticreport"/>
       </reference>
       <name value="DiagnosticReport Profile"/>
-      <description value="Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <description value="Proposed constraints on the DiagnosticReport resource to set minimum expectations to laboratory and similar results reporting."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+<!--	Exceluded as per Issue #158 but retained for the historical purpose
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-diagnosticreportnote"/>
@@ -186,6 +187,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+--> 
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-documentreference"/>
@@ -384,6 +386,33 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/aboriginalidentitytype"/>
+      </reference>
+      <name value="Aboriginal Identity Type"/>
+      <description value="Represents codes for Aboriginal Identity"/>
+      <exampleBoolean value="false"/>
+      <!-- groupingId is not used to exclude from rendering to a page -->
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/aboriginalidentitygroup"/>
+      </reference>
+      <name value="Aboriginal Identity Group"/>
+      <description value="Represents codes for Aboriginal Identity"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/aboriginalidentityindicator"/>
+      </reference>
+      <name value="Aboriginal Identity Indicator"/>
+      <description value="Represents the self identity as an Aboriginal Person"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>  
     <resource>
       <reference>
         <reference value="ValueSet/birthsex"/>

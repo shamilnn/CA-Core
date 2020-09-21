@@ -1,14 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "profile-diagnosticreport",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-diagnosticreport",
-  "version": "0.0.1",
-  "name": "DiagnosticReportProfileLaboratoryReporting",
-  "title": "DiagnosticReport Profile for Laboratory Results Reporting",
+  "version": "0.0.2",
+  "name": "DiagnosticReportProfile",
+  "title": "DiagnosticReport Profile for Results Reporting",
   "status": "draft",
-  "date": "2020-09-15",
+  "date": "2020-09-21",
   "publisher": "Canada Health Infoway",
-  "description": "Proposed constraints and extensions on the DiagnosticReport resource for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
+  "description": "Proposed constraints on the DiagnosticReport resource for the minimal set of data to query and retrieve diagnostic reports associated with laboratory and other results",
   "jurisdiction": [
     {
       "coding": [
@@ -72,13 +71,81 @@
         "min": 1,
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
       }, {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.code:LabResult",
+        "path": "DiagnosticReport.code",
+        "sliceName": "LabResult",
+        "definition": "A code that classifies the Laboratory test(s) and Laboratory result(s). This is used for searching, sorting and display purposes.",
+        "comment": "The code SHALL be LOINC 11502-2 'Laboratory report' code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.code.coding:LabResult.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "http://loinc.org"
+      }, {
+        "id": "DiagnosticReport.code.coding:LabResult.system",
+        "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "fixedCode": "11502-2"
+      }, {
+        "id": "DiagnosticReport.code:@default",
+        "path": "DiagnosticReport.code",
+        "sliceName": "@default",
+        "definition": "A code that classifies the report(s) or result(s). This is used for searching, sorting and display purposes.",
+        "comment": "The code is preferrable comes from LOINC code system",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.code.coding:@default.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "DiagnosticReport.code.coding:@default.system",
+        "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "max": "1"
+      }, {
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/core/StructureDefinition/profile-device", "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
             ]
           }
         ],
@@ -92,6 +159,21 @@
             "targetProfile": [
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-encounter"
             ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Time of the report or note",
+        "definition": "This is the Datetime or Period when the report or note was written.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }, {
+            "code": "Period"
           }
         ],
         "mustSupport": true
@@ -118,8 +200,87 @@
           }
         ]
       }, {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.specimen:LabResult",
+        "path": "DiagnosticReport.specimen",
+        "sliceName": "LabResult",
+        "comment": "Details about the specimen(s) on which this laboratory report is based on.",
+        "min": 1,
+        "max": "*"
+      }, {
+        "id": "DiagnosticReport.specimen:@default",
+        "path": "DiagnosticReport.specimen",
+        "sliceName": "@default",
+        "comment": "Details about specimen(s) on which this report is based on.",
+        "min": 0,
+        "max": "*"
+      }, {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.result:LabResult",
+        "path": "DiagnosticReport.result",
+        "sliceName": "LabResult",
+        "comment": "Observations that represent results produced by laboratory tests or panels/studies",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-observation-results"
+            ]
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.result:@default",
+        "path": "DiagnosticReport.result",
+        "sliceName": "@default",
+        "comment": "Observations that represent results produced for report",
+        "min": 0,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
