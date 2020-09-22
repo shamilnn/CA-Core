@@ -237,6 +237,38 @@
       }, {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "item.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.result:LabResult",
+        "path": "DiagnosticReport.result",
+        "sliceName": "LabResult",
+        "comment": "Observations that represent results produced by laboratory tests or panels/studies",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-observation-results"
+            ]
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.result:@default",
+        "path": "DiagnosticReport.result",
+        "sliceName": "@default",
+        "comment": "Observations that represent results produced for report",
+        "min": 0,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
