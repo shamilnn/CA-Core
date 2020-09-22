@@ -278,8 +278,6 @@
     },
     "StructureDefinition/profile-diagnosticreport":{
     },
-    "StructureDefinition/profile-diagnosticreportnote":{
-    },
     "StructureDefinition/profile-documentreference":{
     },
     "StructureDefinition/profile-encounter":{
@@ -321,6 +319,12 @@
     "StructureDefinition/profile-procedure":{
     },
     "StructureDefinition/profile-smokingstatus":{
+    },
+    "CodeSystem/aboriginalidentitytype":{
+    },
+    "ValueSet/aboriginalidentitygroup":{
+    },
+    "ValueSet/aboriginalidentityindicator":{
     },
     "ValueSet/birthsex":{
     },

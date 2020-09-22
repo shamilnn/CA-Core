@@ -35,14 +35,7 @@
 <a href="profile-diagnosticreport.html">
                         •  DiagnosticReport Profile</a>
 </td>
-<td>Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
-<a href="profile-diagnosticreportnote.html">
-                        •  DiagnosticReport for Report and Note Profile</a>
-</td>
-<td>Proposed constraints and extensions on the DiagnosticReport Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles.</td>
+<td>Proposed constraints on the DiagnosticReport resource to set minimum expectations to laboratory and similar results reporting.</td>
 </tr>
 <tr>
 <td style="column-width:30%">
@@ -279,6 +272,20 @@
 <p>
 <table>
 <tbody>
+<tr>
+<td style="column-width:30%">
+<a href="valueset-aboriginalidentitygroup.html">
+                        •  Aboriginal Identity Group</a>
+</td>
+<td>Represents codes for Aboriginal Identity</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="valueset-aboriginalidentityindicator.html">
+                        •  Aboriginal Identity Indicator</a>
+</td>
+<td>Represents the self identity as an Aboriginal Person</td>
+</tr>
 <tr>
 <td style="column-width:30%">
 <a href="valueset-birthsex.html">
