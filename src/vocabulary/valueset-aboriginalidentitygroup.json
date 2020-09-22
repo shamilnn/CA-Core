@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "ca-aboriginalidentitygroup",
+  "id": "aboriginalidentitygroup",
   "url": "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup",
   "version": "0.0.1",
   "name": "AboriginalIdentityGroup",

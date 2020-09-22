@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "id": "ca-aboriginalidentitytype",
+  "id": "aboriginalidentitytype",
   "url": "https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype",
   "version": "0.0.1",
   "name": "AboriginalIdentityType",

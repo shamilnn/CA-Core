@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "ca-aboriginalidentityindicator",
+  "id": "aboriginalidentityindicator",
   "url": "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator",
   "version": "0.0.1",
   "name": "AboriginalIdentityIndicator",
