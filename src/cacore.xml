@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../src-generated/schemas/fhir-single.xsd">
-  <id value="cacore"/>
+   <id value="cacore"/>
   <url value="http://hl7.org/fhir/ca/core/ImplementationGuide/cacore"/>
   <name value="CACore"/>
   <title value="Canadian Core"/>
@@ -51,6 +51,24 @@
       <name value="Example(s)"/>
       <description value="Example(s) showing the use of the CA-Baseline profiles"/>
     </grouping>-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-aboriginalidentitygroup"/>
+      </reference>
+      <name value="Aboriginal Identity Group"/>
+      <description value="A code classifying the person&#39;s aboriginal identity"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>    
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-aboriginalidentityindicator"/>
+      </reference>
+      <name value="Aboriginal Identity Indicator"/>
+      <description value="A code classifying the person&#39;s self identity as an aboriginal person"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/ext-patientbirthsex"/>
