@@ -195,6 +195,20 @@
 <tbody>
 <tr>
 <td style="column-width:30%">
+<a href="extension-ext-aboriginalidentitygroup.html">
+                        •  Aboriginal Identity Group</a>
+</td>
+<td>A code classifying the person's aboriginal identity</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="extension-ext-aboriginalidentityindicator.html">
+                        •  Aboriginal Identity Indicator</a>
+</td>
+<td>A code classifying the person's self identity as an aboriginal person</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="extension-ext-patientbirthsex.html">
                         •  Birth Sex</a>
 </td>
