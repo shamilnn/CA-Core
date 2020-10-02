@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-patient",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "PatientProfile",
   "title": "Patient Profile",
   "status": "draft",
-  "date": "2020-01-13",
+  "date": "2020-09-29",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the Patient Resource",
   "kind": "resource",
@@ -35,6 +35,40 @@
           ],
           "rules": "open"
         }
+      }, {
+        "id": "Patient.extension:aboriginalidentitygroup",
+        "path": "Patient.extension",
+        "sliceName": "aboriginalidentitygroup",
+        "short": "Extension: Aboriginal Identity Group",
+        "definition": "A code classifying the person's aboriginal identity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/ext-aboriginalidentitygroup"
+            ]
+          }
+        ],
+        "mustSupport": false
+      }, {
+        "id": "Patient.extension:aboriginalidentityindicator",
+        "path": "Patient.extension",
+        "sliceName": "aboriginalidentityindicator",
+        "short": "Extension: Aboriginal Identity Indicator",
+        "definition": "A code classifying the person's self identity as an aboriginal person",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/ext-aboriginalidentityindicator"
+            ]
+          }
+        ],
+        "mustSupport": false
       }, {
         "id": "Patient.extension:birthsex",
         "path": "Patient.extension",

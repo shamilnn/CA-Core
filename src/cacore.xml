@@ -397,6 +397,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-servicerequest"/>
+      </reference>
+      <name value="ServiceRequest Profile"/>
+      <description value="Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-smokingstatus"/>
       </reference>
       <name value="SmokingStatus Profile"/>
