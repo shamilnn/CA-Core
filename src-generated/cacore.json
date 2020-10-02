@@ -352,6 +352,8 @@
     },
     "StructureDefinition/profile-procedure":{
     },
+    "StructureDefinition/profile-servicerequest":{
+    },
     "StructureDefinition/profile-smokingstatus":{
     },
     "CodeSystem/aboriginalidentitytype":{

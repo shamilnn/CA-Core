@@ -179,6 +179,13 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="profile-servicerequest.html">
+                        •  ServiceRequest Profile</a>
+</td>
+<td>Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="profile-smokingstatus.html">
                         •  SmokingStatus Profile</a>
 </td>

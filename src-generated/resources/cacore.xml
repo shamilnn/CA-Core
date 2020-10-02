@@ -396,6 +396,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-servicerequest"/>
+      </reference>
+      <name value="ServiceRequest Profile"/>
+      <description value="Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-smokingstatus"/>
       </reference>
       <name value="SmokingStatus Profile"/>
@@ -711,58 +720,63 @@
 <generation value="generated"/>
 </page>
 <page>
+<nameUrl value="profile-servicerequest.html"/>
+<ns36:title xmlns:ns36="http://hl7.org/fhir" value="ServiceRequest Profile"/>
+<generation value="generated"/>
+</page>
+<page>
 <nameUrl value="profile-smokingstatus.html"/>
-<ns36:title xmlns:ns36="http://hl7.org/fhir" value="SmokingStatus Profile"/>
+<ns37:title xmlns:ns37="http://hl7.org/fhir" value="SmokingStatus Profile"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="aboriginalidentitytype.html"/>
-<ns37:title xmlns:ns37="http://hl7.org/fhir" value="Aboriginal Identity Type"/>
+<ns38:title xmlns:ns38="http://hl7.org/fhir" value="Aboriginal Identity Type"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-aboriginalidentitygroup.html"/>
-<ns38:title xmlns:ns38="http://hl7.org/fhir" value="Aboriginal Identity Group"/>
+<ns39:title xmlns:ns39="http://hl7.org/fhir" value="Aboriginal Identity Group"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-aboriginalidentityindicator.html"/>
-<ns39:title xmlns:ns39="http://hl7.org/fhir" value="Aboriginal Identity Indicator"/>
+<ns40:title xmlns:ns40="http://hl7.org/fhir" value="Aboriginal Identity Indicator"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-birthsex.html"/>
-<ns40:title xmlns:ns40="http://hl7.org/fhir" value="Birth Sex"/>
+<ns41:title xmlns:ns41="http://hl7.org/fhir" value="Birth Sex"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-encountertype.html"/>
-<ns41:title xmlns:ns41="http://hl7.org/fhir" value="Encounter Type"/>
+<ns42:title xmlns:ns42="http://hl7.org/fhir" value="Encounter Type"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-ethnicitycode.html"/>
-<ns42:title xmlns:ns42="http://hl7.org/fhir" value="Ethnicity Code"/>
+<ns43:title xmlns:ns43="http://hl7.org/fhir" value="Ethnicity Code"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-healthconcerncode.html"/>
-<ns43:title xmlns:ns43="http://hl7.org/fhir" value="Health Concern Codes"/>
+<ns44:title xmlns:ns44="http://hl7.org/fhir" value="Health Concern Codes"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptiondrugform.html"/>
-<ns44:title xmlns:ns44="http://hl7.org/fhir" value="Prescription Drug Form"/>
+<ns45:title xmlns:ns45="http://hl7.org/fhir" value="Prescription Drug Form"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-prescriptionmedicinalproduct.html"/>
-<ns45:title xmlns:ns45="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
+<ns46:title xmlns:ns46="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
 <generation value="generated"/>
 </page>
 <page>
 <nameUrl value="valueset-vaccinecodes.html"/>
-<ns46:title xmlns:ns46="http://hl7.org/fhir" value="Vaccine Codes"/>
+<ns47:title xmlns:ns47="http://hl7.org/fhir" value="Vaccine Codes"/>
 <generation value="generated"/>
 </page>
 </page>
