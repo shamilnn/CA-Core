@@ -4,16 +4,6 @@ This Patient profile sets minimum expectations for the Patient resource to recor
 
 Since not all concepts are included within the base FHIR Patient resource, this profile defines localization concepts for use in an Canadian context.
 
-## Differences from US Core
-**Note:** This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fhir/patient.profile.json) on 2020-01-07 and constrained during a review of US Core against Canadian sources.
-
-Key differences from [USCoreR4 Patient](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-patient.html):
-
-* Removed US Race (no Canadian requirement)
-* Added slice and extensions to Patient.identifier
-* Added extensions to Patient.address
-* Retained FHIR default ValueSet instead of US Simple-Language (some existing Canadian specs appear to use full http://tools.ietf.org/html/bcp47)
-
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
 
@@ -30,10 +20,14 @@ Some elements are labeled as MustSupport meaning that implementations that produ
 Following elements are marked as Must Support in the Canadian Patient profile to aid record matching in databases with many pediatric records.
 
 **Must Support elements:**
-1. an identifier
-2. a patient name
-3. contact detail (e.g. a telephone number or an email address)
-4. a birth date
+* an identifier
+* a patient name
+* contact detail (e.g. a telephone number or an email address)
+* a birth date
 
 ## Usage Note
-TBD
+Some of the typical use cases where the Patient profile may be used:
+
+* Enterprise-wide information systems that manage patient registration and services ordering
+* Local or cross-jurisdictional systems to query information about patients whose demographics data match data provided in the query parameters
+* Synchronization of patient information between multiple ADT systems employed by healthcare enterprises

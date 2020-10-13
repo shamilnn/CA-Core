@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-servicerequest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "ServiceRequestProfile",
   "title": "ServiceRequest Profile for Results Reporting",
   "status": "draft",
-  "date": "2020-09-29",
+  "date": "2020-10-06",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed",
   "jurisdiction": [
@@ -59,6 +59,10 @@
           }
         ]
       }, {
+        "id": "ServiceRequest.requisition",
+        "path": "ServiceRequest.requisition",
+        "mustSupport": true
+      }, {
         "id": "ServiceRequest.status",
         "path": "ServiceRequest.status",
         "mustSupport": true
@@ -73,31 +77,60 @@
         "definition": "A code that classifies the service for searching, sorting and display purposes (e.g. Surgical Procedure).",
         "mustSupport": true,
         "binding": {
-          "strength": "preferred",
-          "description": "Classification of the requested service.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetcare"
+          "strength": "preferred"
         }
       }, {
-        "id": "ServiceRequest.category.coding.system",
-        "path": "ServiceRequest.category.coding.system",
-        "min": 1,
-        "max": "1"
-      }, {
-        "id": "ServiceRequest.category.coding.code",
-        "path": "ServiceRequest.category.coding.code",
-        "min": 1,
-        "max": "1"
-      }, {
-        "id": "ServiceRequest.code",
-        "path": "ServiceRequest.code",
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0,
         "mustSupport": true
       }, {
-        "id": "ServiceRequest.code.coding.system",
+        "id": "ServiceRequest.code.coding:LabOrder",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "LabOrder",
+        "short": "Laboratory procedure code",
+        "definition": "A code that identifies a laboratory procedure that have been requested",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the pCLOCD value set for interoperability purposes but are not required to do so to be considered conformant.",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The pan Canadian LOINC Observation Code Database (pCLOCD) is the Canadian version of the LOINC(tm) database. It was created using the LOINC(tm) records and attributes that were constrained for Canadian use and supplemented to specifically meet Canadian requirements. It contains the core LOINC(tm) attributes as required by Regenstrief copyright rules. The LOINC(tm) Component has been customized to meet Canadian requirements and is displayed as the pan Canadian Component Name. This component name is the basis for the pan Canadian Display Name. Core attributes are include both English and Canadian French.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/pCLOCD"
+        }
+      }, {
+        "id": "ServiceRequest.code.coding:LabOrder.system",
         "path": "ServiceRequest.code.coding.system",
         "min": 1,
         "max": "1"
       }, {
-        "id": "ServiceRequest.code.coding.code",
+        "id": "ServiceRequest.code.coding:LabOrder.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.code.coding:@default",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "@default"
+      }, {
+        "id": "ServiceRequest.code.coding:@default.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.code.coding:@default.code",
         "path": "ServiceRequest.code.coding.code",
         "min": 1,
         "max": "1"
