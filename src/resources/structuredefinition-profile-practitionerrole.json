@@ -70,7 +70,7 @@
         "binding": {
           "strength": "preferred",
           "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.",
-          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scptype"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype"
         }
       },
       {
@@ -82,7 +82,7 @@
         "binding": {
           "strength": "preferred",
           "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
-          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"
         }
       },
       {
