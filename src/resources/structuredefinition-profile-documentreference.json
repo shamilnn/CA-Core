@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-documentreference",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "DocumentReferenceProfile",
   "title": "DocumentReference Profile for metadata about the document",
   "status": "draft",
-  "date": "2020-10-14",
+  "date": "2020-10-21",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the DocumentReference resource for the minimal set of data required to reference to a document of any kind for any purpose.",
   "jurisdiction": [
@@ -43,12 +43,7 @@
       }, {
         "id": "DocumentReference.category",
         "path": "DocumentReference.category",
-        "mustSupport": true,
-        "binding": {
-          "strength": "preferred",
-          "description": "The pan Canadian LOINC Observation Code Database (pCLOCD) is the Canadian version of the LOINC(tm) database. It was created using the LOINC(tm) records and attributes that were constrained for Canadian use and supplemented to specifically meet Canadian requirements. It contains the core LOINC(tm) attributes as required by Regenstrief copyright rules. The LOINC(tm) Component has been customized to meet Canadian requirements and is displayed as the pan Canadian Component Name. This component name is the basis for the pan Canadian Display Name. Core attributes are include both English and Canadian French.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/pCLOCD"
-        }
+        "mustSupport": true
       }, {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",

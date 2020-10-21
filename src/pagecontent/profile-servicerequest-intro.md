@@ -37,4 +37,7 @@ Following elements are marked as Must Support in the Canadian ServiceRequest pro
 * performer
 
 ## Usage Note
-TBD
+
+This profile may be used to share relevant information required to support a referral or a transfer of care request from one practitioner to another in which a referral is sent directly to a specific health service described in a shared Health Services Directory.
+
+A ServiceRequest can be supplemented with service-specific clinical decision support information and any other additionally required data, for example, available appointment slots.
