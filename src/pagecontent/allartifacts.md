@@ -21,8 +21,8 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Document Reference Profile | 0 | Not Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
 | Goal Profile | 0 | Not Complete | Not Complete |
-| Immunization Profile | 0 | Complete | Not Complete |
-| ImmunizationRecommendation Profile | 0 | Complete | Not Complete |
+| Immunization Profile | 0 | Complete | DHIR |
+| ImmunizationRecommendation Profile | 0 | Complete | DHIR |
 | Location Profile | 0 | Complete | Not Complete |
 | Medication Profile | 0 | Complete | Not Complete |
 | MedicationAdministration Profile | 0 | Complete | Not Complete |
@@ -32,11 +32,11 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Observation Profile (General) | 0 | Complete | Not Complete |
 | Observation Profile (Laboratory Results) | 0 | Complete | Not Complete |
 | Organization Profile | 0 | Complete | Not Complete |
-| Patient Profile | 0 | Complete | In Progress |
-| Practitioner Profile (General) | 0 | Complete | Not Complete |
-| Practitioner Profile (Provider Registry) | 0 | Complete | Complete |
-| PractitionerRole Profile (General) | 0 | Complete | Complete |
-| PractitionerRole Profile (Provider Registry) | 0 | Complete | Complete |
+| Patient Profile | 0 | Complete | PCR, DHIR |
+| Practitioner Profile (General) | 0 | Complete | PPR, DHIR |
+| Practitioner Profile (Provider Registry) | 0 | Complete | PPR |
+| PractitionerRole Profile (General) | 0 | Complete | PPR |
+| PractitionerRole Profile (Provider Registry) | 0 | Complete | PPR |
 | Procedure Profile | 0 | Complete | Not Complete |
 | SmokingStatus Profile | 0 | Not Complete | Not Complete |
 
