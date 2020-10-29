@@ -34,5 +34,5 @@ Following elements are marked as Must Support in the Canadian DocumentReference 
 
 The following are example usage scenarios for the DocumentReference profile.
 
-* Publish a new document. This can be done using the [IHE MHD Provide Document Bundle [ITI-65]](https://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)) transaction that carries both the document and its metadata.
-* Query the document repository for specific document(s) matching various metadata parameters. This is similar to IHE MHD Find Document References [ITI-67] transaction.
+* Publishing a new document. This can be done using the [IHE MHD Provide Document Bundle [ITI-65]](https://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)) transaction that carries both the document and its metadata.
+* Querying the document repository for specific document(s) matching various metadata parameters. This is similar to IHE MHD Find Document References [ITI-67] transaction.
