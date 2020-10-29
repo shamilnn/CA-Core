@@ -13,7 +13,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 * code that classifies the author of the report
 * code that describes the diagnostic report
 * time when report was created
-* 
 
 ## Must Support Data Elements
 Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/general-guidance.html#must-support) definition).
