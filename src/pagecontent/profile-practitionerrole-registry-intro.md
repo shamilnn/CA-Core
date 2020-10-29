@@ -21,7 +21,7 @@ In situations where the minimum cardinality of an element or attribute is **1** 
 ## Must Support Data Elements
 Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/general-guidance.html#must-support) definition).
 
-Following elements are marked as Must Support in the Canadian Patient profile to aid record matching in databases with many pediatric records.
+Following elements are marked as Must Support in the PractitionerRole profile to aid record matching in databases with many pediatric records.
 
 **Must Support elements:**
 * an identifier
