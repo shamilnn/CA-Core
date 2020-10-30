@@ -16,9 +16,9 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | AllergyIntolerance Profile | 0 | In Progress                 | Not Complete |
 | Condition Profile | 0 | Complete | Not Complete |
 | Device Profile | 0 | Not Complete | Not Complete |
-| DiagnosticReport Profile | 0 | In Progress | Not Complete |
+| DiagnosticReport Profile | 0 | Complete | Not Complete |
 | DiagnosticReport for Report and Note Profile | 0 | Not Complete | Not Complete |
-| Document Reference Profile | 0 | Not Complete | Not Complete |
+| Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
 | Goal Profile | 0 | Not Complete | Not Complete |
 | Immunization Profile | 0 | Complete | DHIR |
