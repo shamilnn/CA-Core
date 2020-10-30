@@ -13,7 +13,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 
 | Profile <br> | Profile Maturity <br> Level <br> | Substream <br>Review Status <br> | Due Diligence<br> Review Status <br> |
 |---|---|---|---|
-| AllergyIntolerance Profile | 0 | In Progress                 | Not Complete |
+| AllergyIntolerance Profile | 0 | Complete                 | Not Complete |
 | Condition Profile | 0 | Complete | Not Complete |
 | Device Profile | 0 | Not Complete | Not Complete |
 | DiagnosticReport Profile | 0 | Complete | Not Complete |
